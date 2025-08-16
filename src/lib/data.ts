@@ -1,5 +1,5 @@
 import type { Project, Service, Workshop, Career } from "@/lib/types";
-import { Code, LayoutTemplate, Palette, Rocket, Briefcase, Bot } from "lucide-react";
+import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } from "lucide-react";
 
 export const projects: Project[] = [
   {
@@ -42,34 +42,44 @@ export const projects: Project[] = [
 
 export const services: Service[] = [
   {
-    title: "Web Development",
-    description: "We build modern, responsive, and high-performance websites and web applications using the latest technologies like Next.js, React, and TypeScript.",
-    icon: Code,
+    title: "Digital Media Works",
+    description: "Comprehensive digital media services including scripting, filming, editing, podcasting, and digital marketing to bring your vision to life.",
+    icon: Film,
   },
   {
-    title: "UI/UX Design",
-    description: "Our design team creates intuitive, engaging, and beautiful user interfaces that provide a seamless user experience across all devices.",
-    icon: Palette,
+    title: "STEM Education",
+    description: "Engaging and interactive STEM education programs designed to inspire the next generation of innovators and thinkers.",
+    icon: FlaskConical,
   },
   {
-    title: "Digital Strategy",
-    description: "We help you define your digital strategy, from product discovery and market research to launch and post-launch optimization.",
+    title: "Embedded Designing & Coding",
+    description: "Expert embedded systems design and coding, from initial concept and hardware design to firmware development and prototyping.",
+    icon: Cpu,
+  },
+  {
+    title: "Research & Development",
+    description: "Dedicated R&D services to explore new technologies, solve complex problems, and drive innovation for your business.",
+    icon: Search,
+  },
+  {
+    title: "Product Development",
+    description: "End-to-end product development, from ideation and strategy to design, development, and market launch.",
+    icon: Package,
+  },
+  {
+    title: "Drone Services",
+    description: "Specialized drone solutions including custom RC drones for enthusiasts and aerial advertisement drones for marketing.",
     icon: Rocket,
   },
   {
-    title: "MVP Development",
-    description: "Launch your product idea quickly with a Minimum Viable Product. We help startups validate their concepts and iterate fast.",
+    title: "Internships & Training",
+    description: "Empowering the next wave of talent with hands-on internships and professional training programs in the tech industry.",
     icon: Briefcase,
   },
   {
-    title: "AI Integration",
-    description: "Leverage the power of Artificial Intelligence. We integrate AI models and services to make your applications smarter.",
-    icon: Bot,
-  },
-  {
-    title: "Brand Identity",
-    description: "We help you build a strong brand identity with a memorable logo, color palette, and typography that resonates with your audience.",
-    icon: LayoutTemplate,
+    title: "Interior Designing",
+    description: "Creative and functional interior design services that transform spaces into beautiful and inspiring environments.",
+    icon: Ruler,
   },
 ];
 
