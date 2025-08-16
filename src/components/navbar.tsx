@@ -15,7 +15,6 @@ import { Logo } from "./logo";
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/workshops", label: "Workshops" },
   { href: "/services", label: "Services" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact Us" },
