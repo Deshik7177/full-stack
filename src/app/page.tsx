@@ -57,12 +57,13 @@ export default function Home() {
           </motion.div>
         </div>
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="/images/hero-background.png"
           alt="Hero background"
-          layout="fill"
+          fill
           objectFit="cover"
           className="opacity-10 dark:opacity-5"
           data-ai-hint="abstract technology"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </section>
