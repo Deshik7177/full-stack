@@ -56,16 +56,6 @@ export default function Home() {
             </Button>
           </motion.div>
         </div>
-        <Image
-          src="/images/hero-background.png"
-          alt="Hero background"
-          fill
-          objectFit="cover"
-          className="opacity-10 dark:opacity-5"
-          data-ai-hint="abstract technology"
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </section>
 
       <section id="services" className="py-20 md:py-24 bg-secondary">

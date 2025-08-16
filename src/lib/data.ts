@@ -5,7 +5,7 @@ export const projects: Project[] = [
   {
     title: "Project Alpha",
     description: "A cutting-edge e-commerce platform with AI-powered recommendations.",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/project-alpha.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
     liveUrl: "#",
     githubUrl: "#",
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: "Project Beta",
     description: "A collaborative project management tool for remote teams.",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/project-beta.png",
     technologies: ["React", "Firebase", "Framer Motion"],
     liveUrl: "#",
     githubUrl: "#",
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     title: "Project Gamma",
     description: "A mobile-first social networking app for creative professionals.",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/project-gamma.png",
     technologies: ["React Native", "Node.js", "GraphQL"],
     liveUrl: "#",
     githubUrl: "#",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: "Project Delta",
     description: "An IoT platform for smart home automation and monitoring.",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/project-delta.png",
     technologies: ["Python", "MQTT", "Grafana"],
     liveUrl: "#",
     githubUrl: "#",
