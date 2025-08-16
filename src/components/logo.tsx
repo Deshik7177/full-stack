@@ -9,11 +9,11 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
       height="28"
       {...props}
     >
-      <g className="font-headline" fill="hsl(var(--primary))">
+      <g className="font-headline" fill="hsl(var(--foreground))">
         <text x="0" y="22" fontSize="24" fontWeight="bold">
           Sytecx
         </text>
-        <text x="88" y="22" fontSize="24" fontWeight="bold" fill="hsl(var(--accent))">
+        <text x="88" y="22" fontSize="24" fontWeight="bold" className="fill-muted-foreground">
           Labs
         </text>
       </g>
