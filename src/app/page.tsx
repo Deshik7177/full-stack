@@ -1,16 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -20,29 +13,13 @@ import {
 } from "@/components/ui/carousel";
 import { projects, services } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
-import { useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
 import { ServiceCard } from "@/components/service-card";
 
 
 export default function Home() {
-  const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-
   return (
     <div className="flex flex-col">
       <section className="relative bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/hero-background.png"
-              alt="Hero background"
-              fill
-              className="object-cover opacity-10"
-              data-ai-hint="abstract geometric background"
-              priority
-            />
-          </div>
         <div className="container mx-auto px-4 text-center z-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,13 +64,9 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <Carousel
-              plugins={[plugin.current]}
               className="w-full"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
               opts={{
                 align: "start",
-                loop: true,
               }}
             >
               <CarouselContent>
@@ -129,13 +102,9 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <Carousel
-              plugins={[plugin.current]}
               opts={{
                 align: "start",
-                loop: true,
               }}
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
               className="w-full"
             >
               <CarouselContent>
