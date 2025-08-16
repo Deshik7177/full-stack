@@ -3,12 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, PenTool, Rocket } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -21,11 +20,29 @@ import {
 } from "@/components/ui/carousel";
 import { projects, services } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { ServiceCard } from "@/components/service-card";
+
 
 export default function Home() {
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <div className="flex flex-col">
       <section className="relative bg-background py-20 md:py-32">
+        <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero-background.png"
+              alt="Hero background"
+              fill
+              className="object-cover opacity-10"
+              data-ai-hint="abstract geometric background"
+              priority
+            />
+          </div>
         <div className="container mx-auto px-4 text-center z-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,34 +85,29 @@ export default function Home() {
               We offer a wide range of services to help you achieve your goals.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.slice(0, 3).map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <div className="bg-primary text-primary-foreground p-3 rounded-md">
-                      <service.icon className="h-6 w-6" />
+          <div className="mt-12">
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-full"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {services.map((service, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                       <ServiceCard service={service} />
                     </div>
-                    <div>
-                      <CardTitle className="font-headline text-xl">
-                        {service.title}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
           </div>
           <div className="mt-12 text-center">
              <Button asChild size="lg" variant="link">
@@ -117,10 +129,13 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <Carousel
+              plugins={[plugin.current]}
               opts={{
                 align: "start",
                 loop: true,
               }}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
               className="w-full"
             >
               <CarouselContent>
