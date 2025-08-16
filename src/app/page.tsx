@@ -25,8 +25,8 @@ import { ProjectCard } from "@/components/project-card";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="bg-background py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative bg-background py-20 md:py-32">
+        <div className="container mx-auto px-4 text-center z-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,6 +56,15 @@ export default function Home() {
             </Button>
           </motion.div>
         </div>
+        <Image
+          src="https://placehold.co/1920x1080.png"
+          alt="Hero background"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-10 dark:opacity-5"
+          data-ai-hint="abstract technology"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </section>
 
       <section id="services" className="py-20 md:py-24 bg-secondary">
@@ -98,7 +107,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12 text-center">
-             <Button asChild size="lg" variant="link" className="text-accent">
+             <Button asChild size="lg" variant="link">
                <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
              </Button>
            </div>
@@ -137,7 +146,7 @@ export default function Home() {
             </Carousel>
           </div>
            <div className="mt-12 text-center">
-             <Button asChild size="lg" variant="link" className="text-accent">
+             <Button asChild size="lg" variant="link">
                <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
              </Button>
            </div>
