@@ -84,7 +84,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center md:hidden">
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
@@ -98,29 +97,54 @@ export function Navbar() {
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={mobileMenuVariants}
-            className="fixed inset-0 top-16 z-40 bg-background md:hidden"
-          >
-            <nav className="flex flex-col items-center justify-center gap-8 p-8 pt-20">
-              {navLinks.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "text-xl font-medium transition-colors hover:text-primary",
-                    pathname === href ? "text-primary" : "text-muted-foreground"
-                  )}
-                >
-                  {label}
-                </Link>
-              ))}
-            </nav>
-          </motion.div>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={mobileMenuVariants}
+              className="fixed right-0 top-0 z-50 h-full w-4/5 max-w-xs bg-background p-6 shadow-lg md:hidden"
+            >
+              <div className="flex h-full flex-col">
+                <div className="mb-8 flex items-center justify-between">
+                   <Logo className="h-7 w-auto" />
+                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                     <X className="h-6 w-6" />
+                     <span className="sr-only">Close menu</span>
+                   </Button>
+                 </div>
+                <nav className="flex flex-1 flex-col items-start gap-6">
+                  {navLinks.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        "w-full rounded-md p-2 text-lg font-medium transition-colors hover:bg-muted hover:text-primary",
+                        pathname === href
+                          ? "bg-muted text-primary"
+                          : "text-foreground"
+                      )}
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </nav>
+                 <div className="mt-8 flex items-center justify-between border-t pt-6">
+                   <span className="text-sm font-medium">Theme</span>
+                   <ThemeToggle />
+                 </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
