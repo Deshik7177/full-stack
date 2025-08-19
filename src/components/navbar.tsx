@@ -51,6 +51,26 @@ export function Navbar() {
       },
     },
   };
+  
+  const overlayVariants = {
+    closed: { 
+      opacity: 0,
+      transition: {
+        type: "tween",
+        ease: "easeInOut",
+        duration: 0.3,
+        delay: 0.1
+      },
+    },
+    open: { 
+      opacity: 1,
+      transition: {
+        type: "tween",
+        ease: "easeInOut",
+        duration: 0.3,
+      },
+     },
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -91,51 +111,61 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="ml-2"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Menu className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={mobileMenuVariants}
-            className="fixed right-0 top-0 z-50 h-full w-4/5 max-w-xs bg-background p-6 shadow-lg md:hidden"
-          >
-            <div className="flex h-full flex-col">
-              <div className="mb-8 flex items-center justify-between">
-                 <Logo className="h-7 w-auto" />
-                 <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                   <X className="h-6 w-6" />
-                   <span className="sr-only">Close menu</span>
-                 </Button>
-               </div>
-              <nav className="flex flex-1 flex-col items-start gap-6">
-                {navLinks.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "w-full rounded-md p-2 text-lg font-medium transition-colors hover:bg-muted hover:text-primary",
-                      pathname === href
-                        ? "bg-muted text-primary"
-                        : "text-foreground"
-                    )}
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </nav>
-               <div className="mt-8 flex items-center justify-between border-t pt-6">
-                 <span className="text-sm font-medium">Theme</span>
-                 <ThemeToggle />
-               </div>
-            </div>
-          </motion.div>
+           <div className="fixed inset-0 z-50 md:hidden">
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={overlayVariants}
+                onClick={() => setIsOpen(false)}
+                className="absolute inset-0 bg-black/50"
+              />
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={mobileMenuVariants}
+                className="fixed right-0 top-0 h-full w-4/5 max-w-xs bg-background p-6 shadow-lg"
+              >
+                <div className="flex h-full flex-col">
+                  <div className="mb-8 flex items-center justify-between">
+                     <Logo className="h-7 w-auto" />
+                     <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                       <X className="h-6 w-6" />
+                       <span className="sr-only">Close menu</span>
+                     </Button>
+                   </div>
+                  <nav className="flex flex-1 flex-col items-start gap-6">
+                    {navLinks.map(({ href, label }) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                          "w-full rounded-md p-2 text-lg font-medium transition-colors hover:bg-muted hover:text-primary",
+                          pathname === href
+                            ? "bg-muted text-primary"
+                            : "text-foreground"
+                        )}
+                      >
+                        {label}
+                      </Link>
+                    ))}
+                  </nav>
+                   <div className="mt-8 flex items-center justify-between border-t pt-6">
+                     <span className="text-sm font-medium">Theme</span>
+                     <ThemeToggle />
+                   </div>
+                </div>
+              </motion.div>
+           </div>
         )}
       </AnimatePresence>
     </header>
