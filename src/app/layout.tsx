@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -36,7 +37,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
