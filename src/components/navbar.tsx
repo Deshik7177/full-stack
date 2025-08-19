@@ -74,7 +74,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Logo className="h-7 w-auto" />
@@ -124,11 +124,11 @@ export function Navbar() {
             animate="open"
             exit="closed"
             variants={overlayVariants}
-            className="fixed inset-0 z-50 md:hidden"
+            className="fixed inset-0 z-50 bg-black/50 md:hidden"
           >
               <motion.div
                 onClick={() => setIsOpen(false)}
-                className="absolute inset-0 bg-black/50"
+                className="absolute inset-0"
               />
               <motion.div
                 variants={mobileMenuVariants}
