@@ -59,7 +59,7 @@ export function Navbar() {
         type: "tween",
         ease: "easeInOut",
         duration: 0.3,
-        delay: 0.1
+        when: "afterChildren",
       },
     },
     open: { 
@@ -68,6 +68,7 @@ export function Navbar() {
         type: "tween",
         ease: "easeInOut",
         duration: 0.3,
+        when: "beforeChildren",
       },
      },
   };
@@ -118,19 +119,18 @@ export function Navbar() {
       </div>
       <AnimatePresence>
         {isOpen && (
-           <div className="fixed inset-0 z-50 md:hidden">
+           <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={overlayVariants}
+            className="fixed inset-0 z-50 md:hidden"
+          >
               <motion.div
-                initial="closed"
-                animate="open"
-                exit="closed"
-                variants={overlayVariants}
                 onClick={() => setIsOpen(false)}
                 className="absolute inset-0 bg-black/50"
               />
               <motion.div
-                initial="closed"
-                animate="open"
-                exit="closed"
                 variants={mobileMenuVariants}
                 className="fixed right-0 top-0 h-full w-4/5 max-w-xs bg-background p-6 shadow-lg"
               >
@@ -165,7 +165,7 @@ export function Navbar() {
                    </div>
                 </div>
               </motion.div>
-           </div>
+           </motion.div>
         )}
       </AnimatePresence>
     </header>
