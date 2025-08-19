@@ -98,6 +98,7 @@ export const workshops: Workshop[] = [
     description: "Learn the fundamentals of the latest version of Next.js, including the App Router, Server Components, and Server Actions.",
     date: "2024-09-15",
     image: "https://placehold.co/600x400.png",
+    registrationUrl: "#",
     dataAiHint: "coding workshop"
   },
   {
@@ -105,6 +106,7 @@ export const workshops: Workshop[] = [
     description: "Master the art of utility-first CSS and create beautiful, custom designs without writing a single line of custom CSS.",
     date: "2024-10-20",
     image: "https://placehold.co/600x400.png",
+    registrationUrl: "#",
     dataAiHint: "design workshop"
   },
   {
@@ -112,6 +114,7 @@ export const workshops: Workshop[] = [
     description: "A crash course in design principles, user research, and prototyping for developers who want to build better products.",
     date: "2024-11-10",
     image: "https://placehold.co/600x400.png",
+    registrationUrl: "#",
     dataAiHint: "team collaboration"
   },
 ];

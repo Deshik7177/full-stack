@@ -41,7 +41,7 @@ export function WorkshopCard({ workshop }: WorkshopCardProps) {
       </CardContent>
       <CardFooter>
         <Button className="w-full" asChild>
-          <Link href="#">Register Now</Link>
+          <Link href={workshop.registrationUrl}>Register Now</Link>
         </Button>
       </CardFooter>
     </Card>

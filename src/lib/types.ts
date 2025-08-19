@@ -26,6 +26,7 @@ export type Workshop = {
   description: string;
   date: string;
   image: string;
+  registrationUrl: string;
   dataAiHint?: string;
 };
 
