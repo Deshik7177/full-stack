@@ -3,6 +3,15 @@ import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } fr
 
 export const projects: Project[] = [
   {
+    title: "Vayuyman",
+    description: "Built for precision and performance. Whether you're capturing epic shots or pushing limits, this drone delivers top-tier tech and smooth flights. Ready to level up your aerial game? Let's fly.",
+    image: "/vayuyman.png",
+    technologies: ["Drone Technology", "Aerospace Engineering", "Embedded Systems"],
+    liveUrl: "#",
+    githubUrl: "#",
+    dataAiHint: "drone technology"
+  },
+  {
     title: "Project Alpha",
     description: "A cutting-edge e-commerce platform with AI-powered recommendations.",
     image: "/images/project-alpha.png",
