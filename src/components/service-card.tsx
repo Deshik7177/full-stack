@@ -1,3 +1,4 @@
+
 import type { Service } from "@/lib/types";
 import {
   Card,
@@ -12,15 +13,16 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <Card className="h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <Card className="h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
       <CardHeader className="flex flex-row items-center gap-4 pb-4">
-        <div className="bg-primary text-primary-foreground p-4 rounded-lg">
-          <service.icon className="h-8 w-8" />
+        <div className="bg-primary text-primary-foreground p-3 rounded-lg">
+          <service.icon className="h-6 w-6" />
         </div>
-        <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
+        <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{service.description}</p>
+      <CardContent className="flex flex-col flex-grow">
+        <p className="font-semibold italic text-primary/90 mb-2">"{service.tagline}"</p>
+        <p className="text-muted-foreground flex-grow">{service.description}</p>
       </CardContent>
     </Card>
   );

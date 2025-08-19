@@ -1,3 +1,4 @@
+
 import type { Project, Service, Workshop, Career } from "@/lib/types";
 import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } from "lucide-react";
 
@@ -51,44 +52,61 @@ export const projects: Project[] = [
 
 export const services: Service[] = [
   {
-    title: "Digital Media Works",
-    description: "Comprehensive digital media services including scripting, filming, editing, podcasting, and digital marketing to bring your vision to life.",
-    icon: Film,
-  },
-  {
-    title: "STEM Education",
-    description: "Engaging and interactive STEM education programs designed to inspire the next generation of innovators and thinkers.",
-    icon: FlaskConical,
-  },
-  {
     title: "Embedded Designing & Coding",
-    description: "Expert embedded systems design and coding, from initial concept and hardware design to firmware development and prototyping.",
+    tagline: "Bringing smart ideas to life, one circuit at a time.",
+    description: "We provide expert embedded systems design and coding, from initial concept and hardware design to firmware development and rapid prototyping.",
     icon: Cpu,
+    category: "Technology & Innovation",
   },
   {
     title: "Research & Development",
-    description: "Dedicated R&D services to explore new technologies, solve complex problems, and drive innovation for your business.",
+    tagline: "Innovating today for the breakthroughs of tomorrow.",
+    description: "Our dedicated R&D services explore emerging technologies to solve complex challenges and drive future-forward innovation for your business.",
     icon: Search,
+    category: "Technology & Innovation",
   },
   {
     title: "Product Development",
-    description: "End-to-end product development, from ideation and strategy to design, development, and market launch.",
+    tagline: "From a great idea to a market-ready reality.",
+    description: "We guide your product from initial concept to a successful market launch, handling strategy, design, development, and deployment.",
     icon: Package,
+    category: "Technology & Innovation",
   },
   {
     title: "Drone Services",
-    description: "Specialized drone solutions including custom RC drones for enthusiasts and aerial advertisement drones for marketing.",
+    tagline: "A new perspective from the sky.",
+    description: "We offer specialized drone solutions, including custom-built RC drones for enthusiasts and advanced aerial advertisement drones for marketing.",
     icon: Rocket,
+    category: "Technology & Innovation",
   },
   {
-    title: "Internships & Training",
-    description: "Empowering the next wave of talent with hands-on internships and professional training programs in the tech industry.",
-    icon: Briefcase,
+    title: "Digital Media Works",
+    tagline: "Crafting stories that captivate and convert.",
+    description: "Our comprehensive digital media services include scripting, filming, editing, and strategic digital marketing to bring your vision to life.",
+    icon: Film,
+    category: "Creative Solutions",
   },
   {
     title: "Interior Designing",
-    description: "Creative and functional interior design services that transform spaces into beautiful and inspiring environments.",
+    tagline: "Designing spaces that inspire and function beautifully.",
+    description: "Our creative and functional interior design services transform commercial and residential spaces into beautiful, inspiring environments.",
     icon: Ruler,
+    category: "Creative Solutions",
+
+  },
+  {
+    title: "STEM Education",
+    tagline: "Inspiring the next generation of innovators.",
+    description: "We deliver engaging and interactive STEM education programs designed to cultivate curiosity and build critical skills for the future.",
+    icon: FlaskConical,
+    category: "Education & Training",
+  },
+  {
+    title: "Internships & Training",
+    tagline: "Empowering talent to shape the future of tech.",
+    description: "Our hands-on internships and professional training programs are designed to empower the next wave of talent with real-world experience.",
+    icon: Briefcase,
+    category: "Education & Training",
   },
 ];
 

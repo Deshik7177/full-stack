@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from "lucide-react";
 
 export type NavLink = {
@@ -19,6 +20,8 @@ export type Service = {
   title: string;
   description: string;
   icon: LucideIcon;
+  tagline: string;
+  category: 'Technology & Innovation' | 'Creative Solutions' | 'Education & Training';
 };
 
 export type Workshop = {
