@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Calendar } from "lucide-react";
 import type { Workshop } from "@/lib/types";
 import {
@@ -39,7 +40,9 @@ export function WorkshopCard({ workshop }: WorkshopCardProps) {
         <p className="text-muted-foreground">{workshop.description}</p>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Register Now</Button>
+        <Button className="w-full" asChild>
+          <Link href="#">Register Now</Link>
+        </Button>
       </CardFooter>
     </Card>
   );
