@@ -15,28 +15,13 @@ export async function submitContactForm(formData: z.infer<typeof contactFormSche
     throw new Error('Invalid form data.');
   }
 
-  // This is where you would call your backend service.
-  // Replace the URL with your actual backend endpoint.
-  try {
-    const response = await fetch('https://your-backend-api.com/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(parsedData.data),
-    });
+  // For production, you would replace this with a call to your email service
+  // For example, using Resend, SendGrid, or Nodemailer
+  console.log('New contact form submission:');
+  console.log('Name:', parsedData.data.name);
+  console.log('Email:', parsedData.data.email);
+  console.log('Message:', parsedData.data.message);
 
-    if (!response.ok) {
-      // The backend returned an error
-      throw new Error('Failed to submit form to backend.');
-    }
-
-    // Backend call was successful
-    return { success: true };
-
-  } catch (error) {
-    console.error('Backend API call failed:', error);
-    // Let the form know that the submission failed
-    throw new Error('There was a problem with the submission.');
-  }
+  // Simulate a successful submission
+  return { success: true };
 }
