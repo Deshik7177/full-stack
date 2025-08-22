@@ -14,6 +14,7 @@ import { Logo } from "./logo";
 
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
   { href: "/workshops", label: "Workshops" },
@@ -147,6 +148,7 @@ export function Navbar() {
                       <Link
                         key={href}
                         href={href}
+                        onClick={() => setIsOpen(false)}
                         className={cn(
                           "w-full rounded-md p-2 text-lg font-medium transition-colors hover:bg-muted hover:text-primary",
                           pathname === href
