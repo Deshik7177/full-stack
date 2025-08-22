@@ -1,22 +1,25 @@
-import type { SVGProps } from 'react';
+import Image from 'next/image';
+import type { HTMLAttributes } from 'react';
+import { cn } from '@/lib/utils';
 
-export function Logo(props: SVGProps<SVGSVGElement>) {
+interface LogoProps extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
+  className?: string;
+}
+
+export function Logo({ className, ...props }: LogoProps) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 160 28"
-      width="160"
-      height="28"
+    <div
+      className={cn('relative h-7 w-40', className)}
       {...props}
     >
-      <g className="font-headline" fill="hsl(var(--foreground))">
-        <text x="0" y="22" fontSize="24" fontWeight="bold">
-          Sytecx
-        </text>
-        <text x="88" y="22" fontSize="24" fontWeight="bold" className="fill-muted-foreground">
-          Labs
-        </text>
-      </g>
-    </svg>
+      <Image
+        src="/images/logo.png"
+        alt="Sytecx Labs Logo"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority
+        className="object-contain"
+      />
+    </div>
   );
 }
