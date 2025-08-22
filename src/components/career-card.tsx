@@ -1,4 +1,6 @@
+
 import type { Career } from "@/lib/types";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -32,7 +34,9 @@ export function CareerCard({ career }: CareerCardProps) {
         <p className="text-muted-foreground">{career.description}</p>
       </CardContent>
       <CardFooter>
-        <Button>Apply Now</Button>
+        <Button asChild>
+          <Link href={career.applyUrl}>Apply Now</Link>
+        </Button>
       </CardFooter>
     </Card>
   );

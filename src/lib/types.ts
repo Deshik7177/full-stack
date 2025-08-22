@@ -38,4 +38,5 @@ export type Career = {
   location: string;
   type: 'Full-time' | 'Part-time' | 'Internship';
   description: string;
+  applyUrl: string;
 };
