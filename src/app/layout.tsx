@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Sytecx Labs Hub",
   description: "Innovative Solutions for a Digital World",
   icons: {
-    icon: Favicon(),
+    icon: "/favicon.ico",
   },
 };
 
