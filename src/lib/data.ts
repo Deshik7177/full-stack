@@ -1,12 +1,12 @@
 
-import type { Project, Service, Workshop, Career } from "@/lib/types";
+import type { Project, Service, Workshop, Career, TeamMember } from "@/lib/types";
 import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } from "lucide-react";
 
 export const projects: Project[] = [
   {
     title: "Vayuyman",
     description: "Built for precision and performance. Whether you're capturing epic shots or pushing limits, this drone delivers top-tier tech and smooth flights. Ready to level up your aerial game? Let's fly.",
-    image: "/images/vayuman.png",
+    image: "https://placehold.co/600x400.png",
     technologies: ["Drone Technology", "Aerospace Engineering", "Embedded Systems"],
     liveUrl: "#",
     githubUrl: "#",
@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Project Alpha",
     description: "A cutting-edge e-commerce platform with AI-powered recommendations.",
-    image: "/images/project-alpha.png",
+    image: "https://placehold.co/600x400.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
     liveUrl: "#",
     githubUrl: "#",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     title: "Project Beta",
     description: "A collaborative project management tool for remote teams.",
-    image: "/images/project-beta.png",
+    image: "https://placehold.co/600x400.png",
     technologies: ["React", "Firebase", "Framer Motion"],
     liveUrl: "#",
     githubUrl: "#",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     title: "Project Gamma",
     description: "A mobile-first social networking app for creative professionals.",
-    image: "/images/project-gamma.png",
+    image: "https://placehold.co/600x400.png",
     technologies: ["React Native", "Node.js", "GraphQL"],
     liveUrl: "#",
     githubUrl: "#",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     title: "Project Delta",
     description: "An IoT platform for smart home automation and monitoring.",
-    image: "/images/project-delta.png",
+    image: "https://placehold.co/600x400.png",
     technologies: ["Python", "MQTT", "Grafana"],
     liveUrl: "#",
     githubUrl: "#",
@@ -158,5 +158,51 @@ export const careers: Career[] = [
     type: "Internship",
     description: "A great opportunity for a student or recent graduate to gain hands-on experience with Node.js, databases, and cloud infrastructure.",
     applyUrl: "/contact"
+  },
+];
+
+export const team: TeamMember[] = [
+  {
+    name: "John Doe",
+    role: "CEO & Founder",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "man portrait",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Jane Smith",
+    role: "Chief Technology Officer",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "woman portrait",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Mike Johnson",
+    role: "Lead Developer",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "man portrait tech",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Emily Davis",
+    role: "Creative Director",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "woman portrait creative",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
   },
 ];

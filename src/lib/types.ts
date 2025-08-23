@@ -40,3 +40,15 @@ export type Career = {
   description: string;
   applyUrl: string;
 };
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  dataAiHint?: string;
+  socials: {
+    linkedin?: string;
+    twitter?: string;
+    github?: string;
+  };
+};

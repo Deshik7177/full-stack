@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Shield, Rocket, Droplets, Leaf, Orbit, Users, Youtube, View } from "lucide-react";
+import { team } from "@/lib/data";
+import { TeamMemberCard } from "@/components/team-member-card";
 
 const services = [
     {
@@ -85,13 +87,13 @@ export default function AboutPage() {
                         We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
                     </p>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {services.map((service) => (
+                        {services.map((service, index) => (
                             <motion.div
                                 key={service.title}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                transition={{ duration: 0.5 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <Card className="h-full text-center">
                                     <CardHeader className="items-center">
@@ -110,7 +112,7 @@ export default function AboutPage() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
                             className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 gap-8"
                         >
                             <Card className="h-full">
@@ -155,6 +157,23 @@ export default function AboutPage() {
                              ))}
                          </div>
                      </div>
+                </section>
+
+                <section>
+                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">Meet Our Team</h2>
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        {team.map((member, index) => (
+                            <motion.div
+                                key={member.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <TeamMemberCard member={member} />
+                            </motion.div>
+                        ))}
+                    </div>
                 </section>
             </div>
         </div>
