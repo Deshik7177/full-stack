@@ -18,7 +18,10 @@ export type Project = {
 
 export type Service = {
   title: string;
+  slug: string;
   description: string;
+  longDescription: string;
+  images?: { url: string; dataAiHint?: string }[];
   icon: LucideIcon;
   tagline: string;
   category: 'Technology & Innovation' | 'Creative Solutions' | 'Education & Training';
