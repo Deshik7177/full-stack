@@ -133,6 +133,13 @@ export const careers: Career[] = [
     applyUrl: "/contact"
   },
   {
+    title: "Backend Developer",
+    location: "Remote",
+    type: "Full-time",
+    description: "We're seeking a skilled Backend Developer to design, build, and maintain the server-side of our web applications.",
+    applyUrl: "/contact"
+  },
+  {
     title: "Backend Developer Intern",
     location: "Remote",
     type: "Internship",
