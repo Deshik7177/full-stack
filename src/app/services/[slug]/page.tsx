@@ -5,16 +5,10 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { services } from "@/lib/data";
 import { PageHeader } from "@/components/page-header";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface ServicePageProps {
   params: {
@@ -48,6 +42,13 @@ export default function ServicePage({ params }: ServicePageProps) {
     },
   };
 
+  const imageGridClasses = [
+      "col-span-2 row-span-2", // First image is larger
+      "",
+      "",
+      "col-span-2", // Last image is wider
+  ]
+
   return (
     <div>
       <PageHeader title={service.title} subtitle={service.tagline} />
@@ -66,33 +67,28 @@ export default function ServicePage({ params }: ServicePageProps) {
           </motion.div>
 
           {service.images && service.images.length > 0 && (
-            <motion.div variants={itemVariants}>
-              <Card className="overflow-hidden">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {service.images.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <div className="aspect-w-4 aspect-h-3">
-                           <Image
-                            src={image.url}
-                            alt={`${service.title} image ${index + 1}`}
-                            width={800}
-                            height={600}
-                            className="object-cover w-full h-full"
-                            data-ai-hint={image.dataAiHint}
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  {service.images.length > 1 && (
-                    <>
-                      <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-                      <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
-                    </>
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-2 grid-rows-3 gap-4"
+            >
+              {service.images.slice(0, 4).map((image, index) => (
+                <div
+                  key={index}
+                  className={cn(
+                    "overflow-hidden rounded-lg shadow-lg",
+                    imageGridClasses[index]
                   )}
-                </Carousel>
-              </Card>
+                >
+                  <Image
+                    src={image.url}
+                    alt={`${service.title} image ${index + 1}`}
+                    width={800}
+                    height={600}
+                    className="object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"
+                    data-ai-hint={image.dataAiHint}
+                  />
+                </div>
+              ))}
             </motion.div>
           )}
         </motion.div>
