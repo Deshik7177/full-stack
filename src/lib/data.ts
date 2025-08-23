@@ -119,33 +119,12 @@ export const workshops: Workshop[] = [
 
 export const careers: Career[] = [
   {
-    title: "Senior Frontend Developer",
-    location: "Remote",
-    type: "Full-time",
-    description: "We are looking for an experienced Frontend Developer proficient in React and TypeScript to join our team and build amazing user experiences.",
-    applyUrl: "/contact"
-  },
-  {
-    title: "UI/UX Designer",
-    location: "New York, NY",
-    type: "Full-time",
-    description: "Join our creative team to design intuitive and visually appealing interfaces for our web and mobile applications.",
-    applyUrl: "/contact"
-  },
-  {
     title: "Backend Developer",
     location: "Remote",
     type: "Full-time",
     description: "We're seeking a skilled Backend Developer to design, build, and maintain the server-side of our web applications.",
     applyUrl: "/contact"
-  },
-  {
-    title: "Backend Developer Intern",
-    location: "Remote",
-    type: "Internship",
-    description: "A great opportunity for a student or recent graduate to gain hands-on experience with Node.js, databases, and cloud infrastructure.",
-    applyUrl: "/contact"
-  },
+  }
 ];
 
 export const team: TeamMember[] = [
