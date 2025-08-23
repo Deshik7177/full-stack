@@ -75,16 +75,16 @@ export default function ServicePage({ params }: ServicePageProps) {
                 <div
                   key={index}
                   className={cn(
-                    "overflow-hidden rounded-lg shadow-lg",
+                    "overflow-hidden rounded-lg shadow-lg relative",
                     imageGridClasses[index]
                   )}
                 >
                   <Image
                     src={image.url}
                     alt={`${service.title} image ${index + 1}`}
-                    width={800}
-                    height={600}
-                    className="object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transform transition-transform duration-300 hover:scale-105"
                     data-ai-hint={image.dataAiHint}
                   />
                 </div>
