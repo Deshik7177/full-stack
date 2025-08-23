@@ -5,109 +5,156 @@ import { PageHeader } from "@/components/page-header";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Shield, Rocket, Droplets, Leaf, Orbit, Users, Youtube, View } from "lucide-react";
 
-const teamMembers = [
+const services = [
     {
-        name: "Alex Johnson",
-        role: "Lead Developer",
-        bio: "Alex is the visionary founder of Sytecx Labs, driving the company's mission to innovate and excel in the tech industry.",
-        image: "https://placehold.co/400x400.png",
-        dataAiHint: "man portrait"
+        title: "Defence Projects",
+        description: "Robotics, surveillance systems, sensor-based security",
+        icon: Shield
     },
     {
-        name: "Maria Garcia",
-        role: "Project Manager",
-        bio: "Maria ensures every project is a success, from initial concept to final delivery, with a keen eye for detail and a passion for excellence.",
-        image: "https://placehold.co/400x400.png",
-        dataAiHint: "woman portrait"
+        title: "Air Technologies",
+        description: "Drone design, flight training, and aerial mapping",
+        icon: Rocket
     },
     {
-        name: "David Smith",
-        role: "UI/UX Designer",
-        bio: "David is the creative force behind our stunning and intuitive user interfaces, blending artistry with user-centric design principles.",
-        image: "https://placehold.co/400x400.png",
-        dataAiHint: "man portrait professional"
+        title: "Water Technologies",
+        description: "Smart Irrigation, water monitoring using IoT",
+        icon: Droplets
+    },
+    {
+        title: "Land Technologies",
+        description: "Autonomous vehicles, smart farming, land automation",
+        icon: Leaf
+    },
+    {
+        title: "Space Technologies",
+        description: "Rovers with Communicating systems",
+        icon: Orbit
     }
 ];
 
-const coreValues = [
-    "Innovation",
-    "Integrity",
-    "Collaboration",
-    "Customer Centricity",
-    "Excellence"
-];
+const podcastStats = [
+    {
+        icon: Users,
+        value: "4k+",
+        label: "Subscribers"
+    },
+    {
+        icon: Youtube,
+        value: "70+",
+        label: "Podcasts"
+    },
+    {
+        icon: View,
+        value: "10k+",
+        label: "Views"
+    }
+]
 
 export default function AboutPage() {
     return (
         <div>
             <PageHeader
-                title="About Sytecx Labs"
-                subtitle="We are a passionate team of innovators, creators, and problem-solvers dedicated to pushing the boundaries of what's possible in the digital world."
+                title="About ATC Academy"
+                subtitle="We're a creative and technological playground where future engineers, filmmakers, and digital leaders are shaped."
             />
-            <div className="container mx-auto px-4 py-16 sm:py-24">
-                <section className="mb-24 text-center">
+            <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
+                <section className="text-center max-w-4xl mx-auto">
                     <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Mission</h2>
-                    <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-                        Our mission is to empower businesses and individuals through cutting-edge technology and creative solutions. We strive to build products that are not only powerful and functional but also beautiful and intuitive. We believe in the power of collaboration and are committed to forging lasting partnerships with our clients to help them achieve their goals.
+                    <p className="text-lg text-muted-foreground">
+                        At ATC Academy, we believe that every student has the power to create, innovate, and lead with impact. Our mission is to bridge the gap between classroom knowledge and real-world skills by offering hands-on, project-driven learning from Class 4 to BTech. Students dive deep into Robotics, Drones, IoT Embedded Systems, Industrial Electronics, and now the dynamic worlds of Digital Marketing and Filmmaking Techniques.
+                    </p>
+                    <p className="text-lg text-muted-foreground mt-4">
+                        From building their own STEM kits and aerial drones to producing cinematic short films and mastering growth marketing strategies, our students aren’t just studying concepts—they’re solving real problems, telling impactful stories, and building their personal brand along the way.
+                    </p>
+                </section>
+                
+                <section className="text-center max-w-4xl mx-auto">
+                    <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Vision</h2>
+                     <p className="text-lg text-muted-foreground">
+                        Our vision at ATC Academy is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—from Class 4 to BTech—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
                     </p>
                 </section>
 
-                <section className="mb-24">
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">Meet Our Team</h2>
-                    <motion.div
-                        className="grid gap-12 md:grid-cols-3"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ staggerChildren: 0.2 }}
-                    >
-                        {teamMembers.map((member, index) => (
-                            <motion.div
-                                key={index}
-                                className="text-center"
-                                variants={{
-                                    hidden: { opacity: 0, y: 30 },
-                                    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-                                }}
-                            >
-                                <div className="relative w-40 h-40 mx-auto mb-4">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        layout="fill"
-                                        className="rounded-full object-cover shadow-lg"
-                                        data-ai-hint={member.dataAiHint}
-                                    />
-                                </div>
-                                <h3 className="font-headline text-xl font-semibold">{member.name}</h3>
-                                <p className="text-primary font-medium">{member.role}</p>
-                                <p className="text-sm text-muted-foreground mt-2">{member.bio}</p>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </section>
-
                 <section>
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">Our Core Values</h2>
-                    <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                        {coreValues.map((value) => (
+                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">What We Do?</h2>
+                    <p className="text-center max-w-3xl mx-auto text-lg text-muted-foreground mb-12">
+                        We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
+                    </p>
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {services.map((service) => (
                             <motion.div
-                                key={value}
-                                className="flex flex-col items-center text-center"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.4 }}
+                                key={service.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.5 }}
                             >
-                                <div className="flex items-center justify-center bg-primary/10 text-primary w-20 h-20 rounded-full mb-4">
-                                    <Check className="w-10 h-10" />
-                                </div>
-                                <h3 className="font-semibold">{value}</h3>
+                                <Card className="h-full text-center">
+                                    <CardHeader className="items-center">
+                                        <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                            <service.icon className="h-8 w-8" />
+                                        </div>
+                                        <h3 className="font-headline text-xl font-semibold pt-2">{service.title}</h3>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-muted-foreground">{service.description}</p>
+                                    </CardContent>
+                                </Card>
                             </motion.div>
                         ))}
+                         <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 gap-8"
+                        >
+                            <Card className="h-full">
+                                <CardHeader>
+                                    <h3 className="font-headline text-xl font-semibold">Filmmaking Techniques</h3>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">We teach filmmaking techniques covering scripting, shooting, editing, and short film production.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="h-full">
+                                <CardHeader>
+                                     <h3 className="font-headline text-xl font-semibold">Digital Marketing</h3>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">We offer Digital Marketing training content creation, branding, ad strategies, and personal brand building.</p>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     </div>
+                </section>
+                
+                <section className="bg-secondary rounded-lg p-8 md:p-12">
+                     <div className="grid md:grid-cols-2 gap-12 items-center">
+                         <div>
+                             <h2 className="font-headline text-3xl font-bold text-primary mb-4">The ATC Podcasters</h2>
+                             <Badge variant="default" className="mb-4">All Topics Considered</Badge>
+                             <p className="text-lg text-muted-foreground mb-4">
+                                We're more than a channel; we're a growing family of Telugu AND other language speakers who love to explore and discuss a variety of subjects. Our goal is to entertain, inform, and bring everyone closer through meaningful content.
+                             </p>
+                              <p className="text-muted-foreground">
+                                This channel is your place for everything that catches your interest, spoken in our own Telugu English. From the exciting world of movies to the critical discussions on politics, entertaining content, and the latest current social issues , technology , Business, culture etc.
+                             </p>
+                         </div>
+                         <div className="grid grid-cols-3 gap-4 text-center">
+                             {podcastStats.map((stat) => (
+                                 <div key={stat.label} className="bg-background/50 rounded-lg p-4 flex flex-col items-center justify-center">
+                                    <stat.icon className="h-10 w-10 text-primary mb-2"/>
+                                    <p className="text-2xl font-bold">{stat.value}</p>
+                                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                 </div>
+                             ))}
+                         </div>
+                     </div>
                 </section>
             </div>
         </div>
