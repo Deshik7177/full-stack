@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { PageHeader } from "@/components/page-header";
 import { CareerCard } from "@/components/career-card";
-import { careers, accolades } from "@/lib/data";
+import { careers } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Lightbulb, Heart, ShieldCheck, Star, Trophy } from "lucide-react";
 import Image from "next/image";
@@ -155,31 +155,6 @@ export default function CareersPage() {
         </div>
       </section>
       
-      <section className="py-20 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">
-            Awards & Accolades
-          </h2>
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {accolades.map((accolade) => (
-              <motion.div key={accolade.title} variants={itemVariants} className="flex flex-col items-center">
-                <div className="p-4 bg-secondary rounded-full mb-4">
-                  <Image src={accolade.logo} alt={`${accolade.issuer} logo`} width={64} height={64} className="h-16 w-16 object-contain" />
-                </div>
-                <h3 className="font-semibold text-lg">{accolade.title}</h3>
-                <p className="text-sm text-muted-foreground">{accolade.issuer}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       <section className="bg-secondary py-16">
         <div className="container mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-4">

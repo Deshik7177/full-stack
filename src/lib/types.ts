@@ -55,9 +55,3 @@ export type TeamMember = {
     github?: string;
   };
 };
-
-export type Accolade = {
-  title: string;
-  issuer: string;
-  logo: string;
-};

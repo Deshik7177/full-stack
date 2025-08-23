@@ -1,5 +1,5 @@
 
-import type { Project, Service, Workshop, Career, TeamMember, Accolade } from "@/lib/types";
+import type { Project, Service, Workshop, Career, TeamMember } from "@/lib/types";
 import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } from "lucide-react";
 
 export const projects: Project[] = [
@@ -171,27 +171,4 @@ export const team: TeamMember[] = [
       twitter: "#",
     },
   },
-];
-
-export const accolades: Accolade[] = [
-    {
-      title: "World's Most Admired Companies",
-      issuer: "Fortune® Magazine 2025",
-      logo: "https://placehold.co/128x128.png",
-    },
-    {
-      title: "#2 in IT Services",
-      issuer: "BrandFinance™ Global 500",
-      logo: "https://placehold.co/128x128.png",
-    },
-    {
-      title: "Top 50 World's Top Brands",
-      issuer: "Kantar BrandZ",
-      logo: "https://placehold.co/128x128.png",
-    },
-    {
-      title: "#1 Tech Employer in India",
-      issuer: "LinkedIn Top Companies 2025",
-      logo: "https://placehold.co/128x128.png",
-    },
 ];
