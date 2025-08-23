@@ -136,7 +136,7 @@ export default function AboutPage() {
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {team.map((member, index) => (
                             <motion.div
-                                key={member.name}
+                                key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.3 }}
