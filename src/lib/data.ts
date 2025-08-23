@@ -11,43 +11,7 @@ export const projects: Project[] = [
     liveUrl: "#",
     githubUrl: "#",
     dataAiHint: "drone technology"
-  },
-  {
-    title: "Project Alpha",
-    description: "A cutting-edge e-commerce platform with AI-powered recommendations.",
-    image: "https://placehold.co/600x400.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
-    dataAiHint: "ecommerce website"
-  },
-  {
-    title: "Project Beta",
-    description: "A collaborative project management tool for remote teams.",
-    image: "https://placehold.co/600x400.png",
-    technologies: ["React", "Firebase", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
-    dataAiHint: "dashboard interface"
-  },
-  {
-    title: "Project Gamma",
-    description: "A mobile-first social networking app for creative professionals.",
-    image: "https://placehold.co/600x400.png",
-    technologies: ["React Native", "Node.js", "GraphQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    dataAiHint: "mobile app"
-  },
-  {
-    title: "Project Delta",
-    description: "An IoT platform for smart home automation and monitoring.",
-    image: "https://placehold.co/600x400.png",
-    technologies: ["Python", "MQTT", "Grafana"],
-    liveUrl: "#",
-    githubUrl: "#",
-    dataAiHint: "smart home"
-  },
+  }
 ];
 
 export const services: Service[] = [
