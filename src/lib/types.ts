@@ -17,7 +17,7 @@ export type Project = {
 };
 
 export type Service = {
-  title: string;
+  title:string;
   slug: string;
   description: string;
   longDescription: string;
@@ -54,4 +54,10 @@ export type TeamMember = {
     twitter?: string;
     github?: string;
   };
+};
+
+export type Accolade = {
+  title: string;
+  issuer: string;
+  logo: string;
 };
