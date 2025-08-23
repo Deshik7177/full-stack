@@ -72,6 +72,9 @@ export const services: Service[] = [
     longDescription: "Innovation is at the core of our R&D services. We help companies stay ahead of the curve by exploring new technological frontiers, from artificial intelligence and machine learning to IoT and blockchain. Our process involves feasibility studies, proof-of-concept development, and rigorous testing to validate new ideas and turn them into viable, market-leading solutions.",
     icon: Search,
     category: "Technology & Innovation",
+    images: [
+      { url: "https://placehold.co/800x600.png", dataAiHint: "product design" },
+  ]
   },
   {
     title: "Product Development",
