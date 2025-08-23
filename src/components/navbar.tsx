@@ -78,9 +78,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Logo className="h-7 w-auto" />
-        </Link>
+        <Logo />
 
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(({ href, label }) => (
@@ -138,7 +136,7 @@ export function Navbar() {
               >
                 <div className="flex h-full flex-col">
                   <div className="mb-8 flex items-center justify-between">
-                     <Logo className="h-7 w-auto" />
+                     <Logo />
                      <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                        <X className="h-6 w-6" />
                        <span className="sr-only">Close menu</span>
