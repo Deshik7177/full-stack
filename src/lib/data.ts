@@ -106,7 +106,16 @@ export const services: Service[] = [
   },
 ];
 
-export const workshops: Workshop[] = [];
+export const workshops: Workshop[] = [
+  {
+    title: "3D Designing Workshop",
+    description: "Learn the fundamentals of 3D design and bring your ideas to life. This hands-on workshop covers modeling, sculpting, and rendering techniques.",
+    date: "2024-09-15T00:00:00.000Z",
+    image: "https://placehold.co/600x400.png",
+    registrationUrl: "/contact",
+    dataAiHint: "3d modeling"
+  }
+];
 
 export const careers: Career[] = [
   {
