@@ -163,7 +163,7 @@ export const careers: Career[] = [
 
 export const team: TeamMember[] = [
   {
-    name: "John Doe",
+    name: "xxxxxxx",
     role: "CEO & Founder",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait",
@@ -174,7 +174,7 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "Jane Smith",
+    name: "xxxxxxx",
     role: "Chief Technology Officer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "woman portrait",
@@ -185,7 +185,7 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "Mike Johnson",
+    name: "xxxxxxx",
     role: "Lead Developer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait tech",
@@ -196,7 +196,7 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "Emily Davis",
+    name: "xxxxxxx",
     role: "Creative Director",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "woman portrait creative",
