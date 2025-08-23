@@ -6,37 +6,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Shield, Rocket, Droplets, Leaf, Orbit, Users, Youtube, View } from "lucide-react";
-import { team } from "@/lib/data";
+import { Users, Youtube, View } from "lucide-react";
+import { team, services } from "@/lib/data";
 import { TeamMemberCard } from "@/components/team-member-card";
 
-const services = [
-    {
-        title: "Defence Projects",
-        description: "Robotics, surveillance systems, sensor-based security",
-        icon: Shield
-    },
-    {
-        title: "Air Technologies",
-        description: "Drone design, flight training, and aerial mapping",
-        icon: Rocket
-    },
-    {
-        title: "Water Technologies",
-        description: "Smart Irrigation, water monitoring using IoT",
-        icon: Droplets
-    },
-    {
-        title: "Land Technologies",
-        description: "Autonomous vehicles, smart farming, land automation",
-        icon: Leaf
-    },
-    {
-        title: "Space Technologies",
-        description: "Rovers with Communicating systems",
-        icon: Orbit
-    }
-];
+const techServices = services.filter(s => s.category === 'Technology & Innovation');
+const creativeServices = services.filter(s => s.category === 'Creative Solutions');
 
 const podcastStats = [
     {
@@ -87,7 +62,7 @@ export default function AboutPage() {
                         We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
                     </p>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {services.map((service, index) => (
+                        {techServices.map((service, index) => (
                             <motion.div
                                 key={service.title}
                                 initial={{ opacity: 0, y: 20 }}
@@ -115,22 +90,19 @@ export default function AboutPage() {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 gap-8"
                         >
-                            <Card className="h-full">
-                                <CardHeader>
-                                    <h3 className="font-headline text-xl font-semibold">Filmmaking Techniques</h3>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">We teach filmmaking techniques covering scripting, shooting, editing, and short film production.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="h-full">
-                                <CardHeader>
-                                     <h3 className="font-headline text-xl font-semibold">Digital Marketing</h3>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">We offer Digital Marketing training content creation, branding, ad strategies, and personal brand building.</p>
-                                </CardContent>
-                            </Card>
+                            {creativeServices.map((service) => (
+                                 <Card className="h-full" key={service.title}>
+                                    <CardHeader className="items-center text-center">
+                                         <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                             <service.icon className="h-8 w-8" />
+                                         </div>
+                                        <h3 className="font-headline text-xl font-semibold pt-2">{service.title}</h3>
+                                    </CardHeader>
+                                    <CardContent className="text-center">
+                                        <p className="text-muted-foreground">{service.description}</p>
+                                    </CardContent>
+                                </Card>
+                            ))}
                         </motion.div>
                     </div>
                 </section>
