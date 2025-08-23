@@ -1,7 +1,7 @@
 
 import type {NextConfig} from 'next';
 
-const nextConfig: NextConfig = {
+const baseConfig: NextConfig = {
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
@@ -17,21 +17,24 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+};
+
+const devConfig: NextConfig = {
+  ...baseConfig,
   // START: DEV CONFIG
   // The following properties are set for development only.
   // They will be removed in production builds.
   experimental: {
-    ...(process.env.NODE_ENV === 'development'
-      ? {
-          // This is needed to allow the Next.js dev server to be accessed from the Firebase Studio preview.
-          allowedDevOrigins: [
-            '*.cloudworkstations.dev',
-            '*.firebase.studio',
-          ],
-        }
-      : {}),
+    ...baseConfig.experimental,
+    // This is needed to allow the Next.js dev server to be accessed from the Firebase Studio preview.
+    allowedDevOrigins: [
+      '*.cloudworkstations.dev',
+      '*.firebase.studio',
+    ],
   },
   // END: DEV CONFIG
 };
+
+const nextConfig = process.env.NODE_ENV === 'development' ? devConfig : baseConfig;
 
 export default nextConfig;
