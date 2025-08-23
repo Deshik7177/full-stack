@@ -24,14 +24,11 @@ let nextConfig: NextConfig = baseConfig;
 if (process.env.NODE_ENV === 'development') {
   nextConfig = {
     ...baseConfig,
-    experimental: {
-      ...baseConfig.experimental,
-      // This is needed to allow the Next.js dev server to be accessed from the Firebase Studio preview.
-      allowedDevOrigins: [
-        '*.cloudworkstations.dev',
-        '*.firebase.studio',
-      ],
-    },
+    // This is needed to allow the Next.js dev server to be accessed from the Firebase Studio preview.
+    allowedDevOrigins: [
+      '*.cloudworkstations.dev',
+      '*.firebase.studio',
+    ],
   };
 }
 
