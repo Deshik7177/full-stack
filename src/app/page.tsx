@@ -37,7 +37,7 @@ export default function Home() {
       />
       <div className="fixed inset-0 bg-black/60" />
 
-      <div className="relative">
+      <div className="relative z-10">
         <section className="text-white h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="text-white">
+        <div className="bg-transparent text-white">
           <motion.section
             id="services"
             className="py-20 md:py-24"
@@ -110,7 +110,7 @@ export default function Home() {
                 </Carousel>
               </div>
               <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link" className="text-white">
+                <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
                   <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
@@ -155,7 +155,7 @@ export default function Home() {
                 </Carousel>
               </div>
               <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link" className="text-white">
+                <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
                   <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
