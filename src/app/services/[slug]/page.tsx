@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { services } from "@/lib/data";
@@ -47,7 +48,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 <div
                   key={index}
                   className={cn(
-                    "overflow-hidden rounded-lg shadow-lg relative",
+                    "overflow-hidden rounded-lg shadow-lg relative aspect-video",
                     imageGridClasses[index]
                   )}
                 >
