@@ -30,14 +30,14 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <>
       <div 
         className="fixed inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
       />
       <div className="fixed inset-0 bg-black/60" />
 
-      <div className="relative z-10">
+      <div className="relative">
         <section className="text-white h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -82,7 +82,7 @@ export default function Home() {
           >
             <div className="container mx-auto px-4">
               <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
                   Our Services
                 </h2>
                 <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
@@ -127,7 +127,7 @@ export default function Home() {
           >
             <div className="container mx-auto px-4">
               <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
                   Recent Projects
                 </h2>
                 <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
@@ -170,7 +170,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className="container mx-auto px-4 text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
                   Ready to start a project?
                 </h2>
                 <p className="mt-3 max-w-xl mx-auto text-lg text-gray-200">
@@ -187,6 +187,6 @@ export default function Home() {
           </motion.section>
         </div>
       </div>
-    </div>
+    </>
   );
 }
