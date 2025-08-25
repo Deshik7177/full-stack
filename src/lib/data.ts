@@ -38,7 +38,7 @@ export const services: Service[] = [
     category: "Technology & Innovation",
     images: [
       { url: "https://placehold.co/800x600.png", dataAiHint: "product design" },
-  ]
+    ]
   },
   {
     title: "Product Development",
@@ -73,6 +73,9 @@ export const services: Service[] = [
     longDescription: "In the digital age, compelling content is king. Our digital media services cover the entire creative process, from initial concept and scriptwriting to professional videography, post-production, and strategic distribution. We help brands tell their stories, engage their audiences, and achieve their marketing objectives through high-quality video content and targeted digital campaigns.",
     icon: Film,
     category: "Creative Solutions",
+    images: [
+        { url: "https://placehold.co/800x600.png", dataAiHint: "video production" },
+    ]
   },
   {
     title: "Interior Designing",
