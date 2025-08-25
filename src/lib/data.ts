@@ -24,7 +24,7 @@ export const services: Service[] = [
     icon: Cpu,
     category: "Technology & Innovation",
     images: [
-        { url: "https://placehold.co/800x600.png", dataAiHint: "circuit board" },
+        { url: "/images/Embedded-Systems.png", dataAiHint: "circuit board" },
         { url: "https://placehold.co/800x600.png", dataAiHint: "prototyping electronics" },
     ]
   },
