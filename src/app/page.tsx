@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -19,17 +20,22 @@ import { ServiceCard } from "@/components/service-card";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative bg-background py-20 md:py-32">
+      <section className="relative text-white py-20 md:py-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 text-center z-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-6xl lg:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
               Sytecx Labs
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
               Innovative Solutions for a Digital World. We build beautiful,
               functional, and scalable web applications.
             </p>
@@ -45,7 +51,7 @@ export default function Home() {
                 Our Work <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </motion.div>
