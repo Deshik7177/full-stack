@@ -1,6 +1,6 @@
 
-import type { Project, Service, Workshop, Career, TeamMember } from "@/lib/types";
-import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket } from "lucide-react";
+import type { Project, Service, Workshop, Career, TeamMember, WhyJoinUsItem } from "@/lib/types";
+import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket, Users, Handshake, BrainCircuit, HeartHandshake } from "lucide-react";
 
 export const projects: Project[] = [
   {
@@ -177,4 +177,27 @@ export const team: TeamMember[] = [
       twitter: "#",
     },
   },
+];
+
+export const whyJoinUs: WhyJoinUsItem[] = [
+  {
+    title: "Innovate with Purpose",
+    description: "Work on cutting-edge projects that solve real-world problems and make a tangible impact on a global scale.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Collaborative Culture",
+    description: "Join a supportive and inclusive team where your ideas are valued and you can learn from the best in the industry.",
+    icon: Users,
+  },
+  {
+    title: "Continuous Growth",
+    description: "We invest in your development with ongoing training, mentorship, and opportunities to advance your career.",
+    icon: Handshake,
+  },
+  {
+    title: "Well-being First",
+    description: "Enjoy comprehensive benefits, flexible work arrangements, and a culture that prioritizes your health and happiness.",
+    icon: HeartHandshake,
+  }
 ];

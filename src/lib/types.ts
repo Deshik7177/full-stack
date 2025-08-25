@@ -55,3 +55,9 @@ export type TeamMember = {
     github?: string;
   };
 };
+
+export type WhyJoinUsItem = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+};
