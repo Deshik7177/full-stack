@@ -15,8 +15,6 @@ import {
 import { projects, services } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
 import { ServiceCard } from "@/components/service-card";
-import { Footer } from "@/components/footer";
-
 
 export default function Home() {
 
@@ -187,7 +185,6 @@ export default function Home() {
                 </div>
             </div>
           </motion.section>
-          <Footer />
         </div>
       </div>
     </div>
