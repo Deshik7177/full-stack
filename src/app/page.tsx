@@ -30,14 +30,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
-      />
-      <div className="fixed inset-0 bg-black/60" />
-
-      <div className="relative z-10">
+    <div className="homepage-with-fixed-bg">
         <section className="text-white h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -186,7 +179,6 @@ export default function Home() {
             </div>
           </motion.section>
         </div>
-      </div>
-    </>
+    </div>
   );
 }

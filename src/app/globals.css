@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,4 +91,30 @@ body {
     width: 40px;
     height: 40px;
     background-color: hsla(var(--primary), 0.2);
+}
+
+.homepage-with-fixed-bg {
+    position: relative;
+    isolation: isolate;
+}
+
+.homepage-with-fixed-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    
+    background-image: url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Add overlay to the pseudo-element */
+.homepage-with-fixed-bg::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
 }
