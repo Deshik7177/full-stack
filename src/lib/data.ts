@@ -97,6 +97,9 @@ export const services: Service[] = [
     longDescription: "Our STEM education programs are designed to make learning engaging, interactive, and relevant. We offer a range of workshops and courses in robotics, coding, and engineering, providing students with hands-on experience and the problem-solving skills needed to excel in a technology-driven world. Our goal is to inspire the next generation of scientists, engineers, and innovators.",
     icon: FlaskConical,
     category: "Education & Training",
+    images: [
+      { url: "https://images.unsplash.com/photo-1701486822668-84a259963795?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMHNpdHRpbmclMjBvbiUyMHRvcCUyMG9mJTIwYSUyMGJveHxlbnwwfHx8fDE3MjQ2OTU3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080", dataAiHint: "robot box" },
+    ]
   },
   {
     title: "Internships & Training",
