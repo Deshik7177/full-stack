@@ -19,6 +19,18 @@ import { Footer } from "@/components/footer";
 
 
 export default function Home() {
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.5,
+      }
+    }
+  };
+
   return (
     <div className="relative">
       <div 
@@ -62,7 +74,14 @@ export default function Home() {
         </section>
 
         <div className="text-white">
-          <section id="services" className="py-20 md:py-24">
+          <motion.section
+            id="services"
+            className="py-20 md:py-24"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="container mx-auto px-4">
               <div className="text-center">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">
@@ -98,9 +117,16 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-          </section>
+          </motion.section>
 
-          <section id="projects" className="py-20 md:py-24">
+          <motion.section
+            id="projects"
+            className="py-20 md:py-24"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="container mx-auto px-4">
               <div className="text-center">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">
@@ -136,16 +162,16 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-          </section>
+          </motion.section>
 
-          <section className="py-20 md:py-24 text-white">
+          <motion.section
+            className="py-20 md:py-24 text-white"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="container mx-auto px-4 text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5 }}
-              >
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">
                   Ready to start a project?
                 </h2>
@@ -159,9 +185,8 @@ export default function Home() {
                     </Link>
                   </Button>
                 </div>
-              </motion.div>
             </div>
-          </section>
+          </motion.section>
           <Footer />
         </div>
       </div>
