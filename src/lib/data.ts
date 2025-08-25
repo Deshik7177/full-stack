@@ -37,7 +37,7 @@ export const services: Service[] = [
     icon: Search,
     category: "Technology & Innovation",
     images: [
-      { url: "https://placehold.co/800x600.png", dataAiHint: "product design" },
+      { url: "https://images.unsplash.com/photo-1677756041243-08ac39882525?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "product design" },
     ]
   },
   {
@@ -49,7 +49,7 @@ export const services: Service[] = [
     icon: Package,
     category: "Technology & Innovation",
     images: [
-        { url: "https://placehold.co/800x600.png", dataAiHint: "product design" },
+        { url: "https://images.unsplash.com/photo-1743385779347-1549dabf1320?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "product design" },
     ]
   },
   {
@@ -61,8 +61,8 @@ export const services: Service[] = [
     icon: Rocket,
     category: "Technology & Innovation",
     images: [
-        { url: "https://placehold.co/800x600.png", dataAiHint: "drone aerial" },
-        { url: "https://placehold.co/800x600.png", dataAiHint: "custom drone" },
+        { url: "https://plus.unsplash.com/premium_photo-1745034092251-cf14d6fb3fcd?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "drone aerial" },
+        { url: "https://images.unsplash.com/photo-1482169078677-7d5fa2b50e1a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "custom drone" },
     ]
   },
   {
