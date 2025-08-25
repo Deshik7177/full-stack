@@ -6,7 +6,7 @@ export const projects: Project[] = [
   {
     title: "Vayuyman",
     description: "Built for precision and performance. Whether you're capturing epic shots or pushing limits, this drone delivers top-tier tech and smooth flights. Ready to level up your aerial game? Let's fly.",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/vayuman.png",
     technologies: ["Drone Technology", "Aerospace Engineering", "Embedded Systems"],
     liveUrl: "#",
     githubUrl: "#",
