@@ -11,12 +11,14 @@ export function Body({
 }>) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const isCareersPage = pathname === '/careers';
 
   return (
       <body 
         className={cn(
           "font-body antialiased",
-          isHomePage && "homepage-bg"
+          isHomePage && "homepage-bg",
+          isCareersPage && "careers-page-bg"
         )}
         suppressHydrationWarning
       >
