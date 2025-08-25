@@ -3,7 +3,6 @@ import Image from "next/image";
 import { services } from "@/lib/data";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ServicePageProps {
@@ -55,9 +54,8 @@ export default function ServicePage({ params }: ServicePageProps) {
                   <Image
                     src={image.url}
                     alt={`${service.title} image ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transform transition-transform duration-300 hover:scale-105"
+                    fill
+                    className="object-cover transform transition-transform duration-300 hover:scale-105"
                     data-ai-hint={image.dataAiHint}
                   />
                 </div>

@@ -151,7 +151,7 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "xxxxxxx",
+    name: "Deshik",
     role: "Lead Developer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait tech",
