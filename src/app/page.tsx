@@ -15,7 +15,6 @@ import {
 import { projects, services } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
 import { ServiceCard } from "@/components/service-card";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
 
@@ -67,7 +66,7 @@ export default function Home() {
 
       <motion.section
         id="services"
-        className="py-20 md:py-24 text-white bg-transparent"
+        className="py-20 md:py-24 bg-transparent text-white"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -93,7 +92,7 @@ export default function Home() {
                 {services.map((service, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      <ServiceCard service={service} className="service-card-bg" />
+                      <ServiceCard service={service} />
                     </div>
                   </CarouselItem>
                 ))}
@@ -112,7 +111,7 @@ export default function Home() {
 
       <motion.section
         id="projects"
-        className="py-20 md:py-24 text-white bg-transparent"
+        className="py-20 md:py-24 bg-transparent text-white"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -156,7 +155,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="py-20 md:py-24 text-white bg-transparent"
+        className="py-20 md:py-24 bg-transparent text-white"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
