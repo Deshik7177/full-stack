@@ -15,6 +15,7 @@ import {
 import { projects, services } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
 import { ServiceCard } from "@/components/service-card";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
 
@@ -31,154 +32,152 @@ export default function Home() {
 
   return (
     <div>
-        <section className="h-screen flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+      <section className="h-screen flex items-center justify-center text-white bg-transparent">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+              Sytecx Labs
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
+              Innovative Solutions for a Digital World. We build beautiful,
+              functional, and scalable web applications.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8 flex justify-center gap-4"
+          >
+            <Button asChild size="lg">
+              <Link href="/projects">
+                Our Work <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      <motion.section
+        id="services"
+        className="py-20 md:py-24 text-white bg-transparent"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">
+              Our Services
+            </h2>
+            <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
+              We offer a wide range of services to help you achieve your goals.
+            </p>
+          </div>
+          <div className="mt-12">
+            <Carousel
+              className="w-full"
+              opts={{
+                align: "start",
+              }}
             >
-              <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
-                Sytecx Labs
-              </h1>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
-                Innovative Solutions for a Digital World. We build beautiful,
-                functional, and scalable web applications.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 flex justify-center gap-4"
+              <CarouselContent>
+                {services.map((service, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <ServiceCard service={service} className="service-card-bg" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+          </div>
+          <div className="mt-12 text-center">
+            <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
+              <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            </Button>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        id="projects"
+        className="py-20 md:py-24 text-white bg-transparent"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">
+              Recent Projects
+            </h2>
+            <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
+              Check out some of the amazing work we've delivered.
+            </p>
+          </div>
+          <div className="mt-12">
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              className="w-full"
             >
-              <Button asChild size="lg">
-                <Link href="/projects">
-                  Our Work <ArrowRight className="ml-2 h-5 w-5" />
+              <CarouselContent>
+                {projects.map((project, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <ProjectCard project={project} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+          </div>
+          <div className="mt-12 text-center">
+            <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
+              <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            </Button>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="py-20 md:py-24 text-white bg-transparent"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto px-4 text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">
+              Ready to start a project?
+            </h2>
+            <p className="mt-3 max-w-xl mx-auto text-lg text-gray-200">
+              Let's build something amazing together. Get in touch with us today.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/contact">
+                  Let's Talk
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/contact">Contact Us</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        <div className="text-white">
-          <motion.section
-            id="services"
-            className="py-20 md:py-24"
-            variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div className="container mx-auto px-4">
-              <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
-                  Our Services
-                </h2>
-                <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
-                  We offer a wide range of services to help you achieve your goals.
-                </p>
-              </div>
-              <div className="mt-12">
-                <Carousel
-                  className="w-full"
-                  opts={{
-                    align: "start",
-                  }}
-                >
-                  <CarouselContent>
-                    {services.map((service, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                        <div className="p-1 h-full">
-                          <ServiceCard service={service} className="service-card-bg" />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="hidden sm:flex" />
-                  <CarouselNext className="hidden sm:flex" />
-                </Carousel>
-              </div>
-              <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
-                  <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
-                </Button>
-              </div>
             </div>
-          </motion.section>
-
-          <motion.section
-            id="projects"
-            className="py-20 md:py-24"
-            variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div className="container mx-auto px-4">
-              <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
-                  Recent Projects
-                </h2>
-                <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
-                  Check out some of the amazing work we've delivered.
-                </p>
-              </div>
-              <div className="mt-12">
-                <Carousel
-                  opts={{
-                    align: "start",
-                  }}
-                  className="w-full"
-                >
-                  <CarouselContent>
-                    {projects.map((project, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                        <div className="p-1">
-                          <ProjectCard project={project} />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="hidden sm:flex" />
-                  <CarouselNext className="hidden sm:flex" />
-                </Carousel>
-              </div>
-              <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
-                  <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
-                </Button>
-              </div>
-            </div>
-          </motion.section>
-
-          <motion.section
-            className="py-20 md:py-24 text-white"
-            variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">
-                  Ready to start a project?
-                </h2>
-                <p className="mt-3 max-w-xl mx-auto text-lg text-gray-200">
-                  Let's build something amazing together. Get in touch with us today.
-                </p>
-                <div className="mt-8">
-                  <Button asChild size="lg" variant="secondary">
-                    <Link href="/contact">
-                      Let's Talk
-                    </Link>
-                  </Button>
-                </div>
-            </div>
-          </motion.section>
         </div>
+      </motion.section>
     </div>
   );
 }
