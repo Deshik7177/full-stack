@@ -7,15 +7,10 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { CustomCursor } from "@/components/custom-cursor";
 import "./globals.css";
+import { Body } from "@/components/body";
 
-const Favicon = () => {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <rect width="100" height="100" rx="16" fill="hsl(215 28% 48%)" />
-    <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="70" font-weight="bold" fill="white" font-family="sans-serif">S</text>
-  </svg>`;
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-};
-
+// Metadata can't be in a client component, so we export it separately.
+// Next.js will still pick it up.
 export const metadata: Metadata = {
   title: "Sytecx Labs Hub",
   description: "Innovative Solutions for a Digital World",
@@ -29,6 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -39,7 +35,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased" suppressHydrationWarning>
+      <Body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -60,7 +56,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-      </body>
+      </Body>
     </html>
   );
 }

@@ -30,8 +30,8 @@ export default function Home() {
   };
 
   return (
-    <div className="homepage-with-fixed-bg">
-        <section className="text-white h-screen flex items-center justify-center">
+    <div>
+        <section className="h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="bg-transparent text-white">
+        <div className="text-white">
           <motion.section
             id="services"
             className="py-20 md:py-24"
@@ -93,7 +93,7 @@ export default function Home() {
                     {services.map((service, index) => (
                       <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-1 h-full">
-                          <ServiceCard service={service} />
+                          <ServiceCard service={service} className="service-card-bg" />
                         </div>
                       </CarouselItem>
                     ))}
