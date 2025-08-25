@@ -60,14 +60,14 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="bg-background">
-          <section id="services" className="py-20 md:py-24 bg-secondary">
+        <div className="text-white">
+          <section id="services" className="py-20 md:py-24">
             <div className="container mx-auto px-4">
               <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl">
                   Our Services
                 </h2>
-                <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
+                <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
                   We offer a wide range of services to help you achieve your goals.
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function Home() {
                 </Carousel>
               </div>
               <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link">
+                <Button asChild size="lg" variant="link" className="text-white">
                   <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
@@ -102,10 +102,10 @@ export default function Home() {
           <section id="projects" className="py-20 md:py-24">
             <div className="container mx-auto px-4">
               <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl">
                   Recent Projects
                 </h2>
-                <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
+                <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
                   Check out some of the amazing work we've delivered.
                 </p>
               </div>
@@ -130,14 +130,14 @@ export default function Home() {
                 </Carousel>
               </div>
               <div className="mt-12 text-center">
-                <Button asChild size="lg" variant="link">
+                <Button asChild size="lg" variant="link" className="text-white">
                   <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
             </div>
           </section>
 
-          <section className="py-20 md:py-24 bg-primary text-primary-foreground">
+          <section className="py-20 md:py-24 text-white">
             <div className="container mx-auto px-4 text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -148,7 +148,7 @@ export default function Home() {
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">
                   Ready to start a project?
                 </h2>
-                <p className="mt-3 max-w-xl mx-auto text-lg text-primary-foreground/80">
+                <p className="mt-3 max-w-xl mx-auto text-lg text-gray-200">
                   Let's build something amazing together. Get in touch with us today.
                 </p>
                 <div className="mt-8">
