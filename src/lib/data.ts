@@ -74,7 +74,7 @@ export const services: Service[] = [
     icon: Film,
     category: "Creative Solutions",
     images: [
-        { url: "https://placehold.co/800x600.png", dataAiHint: "video production" },
+        { url: "https://images.unsplash.com/photo-1750233894598-6b7db500a3e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "video production" },
     ]
   },
   {
@@ -86,7 +86,7 @@ export const services: Service[] = [
     icon: Ruler,
     category: "Creative Solutions",
     images: [
-        { url: "https://placehold.co/800x600.png", dataAiHint: "modern interior" },
+        { url: "https://images.unsplash.com/photo-1642210410202-2fb2d081e2d8?q=80&w=1095&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "modern interior" },
     ]
   },
   {
@@ -98,7 +98,7 @@ export const services: Service[] = [
     icon: FlaskConical,
     category: "Education & Training",
     images: [
-      { url: "https://images.unsplash.com/photo-1701486822668-84a259963795?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMHNpdHRpbmclMjBvbiUyMHRvcCUyMG9mJTIwYSUyMGJveHxlbnwwfHx8fDE3MjQ2OTU3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080", dataAiHint: "robot box" },
+      { url: "https://images.unsplash.com/photo-1655088651367-f9f4e1328f08?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", dataAiHint: "robot box" },
     ]
   },
   {
@@ -117,7 +117,7 @@ export const workshops: Workshop[] = [
     title: "3D Designing Workshop",
     description: "Learn the fundamentals of 3D design and bring your ideas to life. This hands-on workshop covers modeling, sculpting, and rendering techniques.",
     date: "2024-09-15T00:00:00.000Z",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1547194936-28214bd75193?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     registrationUrl: "/contact",
     dataAiHint: "3d modeling"
   }
