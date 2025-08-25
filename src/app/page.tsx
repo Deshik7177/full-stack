@@ -20,7 +20,7 @@ import { ServiceCard } from "@/components/service-card";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative text-white py-20 md:py-32">
+      <section className="relative text-white h-screen flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
