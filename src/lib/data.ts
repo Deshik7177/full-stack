@@ -24,8 +24,8 @@ export const services: Service[] = [
     icon: Cpu,
     category: "Technology & Innovation",
     images: [
-        { url: "/images/Embedded-Systems.png", dataAiHint: "circuit board" },
-        { url: "https://placehold.co/800x600.png", dataAiHint: "prototyping electronics" },
+        { url: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzU2MTE5NDc1fDA&ixlib=rb-4.1.0&q=80&w=1080", dataAiHint: "circuit board" },
+        { url: "https://images.unsplash.com/photo-1610812388300-cd1e9cf28b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm90b3R5cGluZyUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTc1NjExOTQ3NXww&ixlib=rb-4.1.0&q=80&w=1080", dataAiHint: "prototyping electronics" },
     ]
   },
   {
