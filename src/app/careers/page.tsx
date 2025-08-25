@@ -2,12 +2,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PageHeader } from "@/components/page-header";
 import { CareerCard } from "@/components/career-card";
-import { careers } from "@/lib/data";
+import { careers, whyJoinUs } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Lightbulb, Heart, ShieldCheck, Star, Trophy } from "lucide-react";
-import Image from "next/image";
+import { ShieldCheck, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -32,43 +30,25 @@ const itemVariants = {
   },
 };
 
-const whyJoinUs = [
-  {
-    icon: Lightbulb,
-    title: "Innovate & Grow",
-    description: "Work on cutting-edge projects and continuously learn new skills in a dynamic environment that fosters creativity.",
-  },
-  {
-    icon: Users,
-    title: "Collaborative Culture",
-    description: "Be part of a supportive team that values open communication, teamwork, and mutual respect.",
-  },
-  {
-    icon: Heart,
-    title: "Health & Wellbeing",
-    description: "We offer flexible work arrangements and prioritize your well-being with comprehensive benefits.",
-  },
-   {
-    icon: Star,
-    title: "Inspiring Workspaces",
-    description: "Our modern, well-equipped offices are designed to foster creativity, collaboration, and productivity.",
-  },
-];
-
 export default function CareersPage() {
   return (
     <div>
-      <section className="relative bg-secondary py-20 md:py-32">
+      <section className="relative text-white py-20 md:py-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1691178548430-6dc9774f414c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 text-center z-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-6xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl">
               Build a Future You Believe In
             </h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground md:text-xl">
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-200 md:text-xl">
               Our people are our greatest asset. We are committed to supporting them to change the world and create a better future for everyone.
             </p>
           </motion.div>
