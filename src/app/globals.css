@@ -9,57 +9,57 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 96%; /* #F5F5F5 */
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 275 100% 25%; /* #4B0082 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 283 100% 42%; /* #9400D3 */
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 275 100% 25%;
-    --chart-1: 275 100% 25%;
-    --chart-2: 275 90% 45%;
-    --chart-3: 275 80% 65%;
-    --chart-4: 283 90% 50%;
-    --chart-5: 283 80% 70%;
+    --background: 220 13% 98%; /* Light Gray */
+    --foreground: 220 9% 10%;
+    --card: 220 13% 100%;
+    --card-foreground: 220 9% 10%;
+    --popover: 220 13% 100%;
+    --popover-foreground: 220 9% 10%;
+    --primary: 175 41% 29%; /* Dark Teal */
+    --primary-foreground: 175 25% 95%;
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 9% 10%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 175 55% 45%; /* Bright Teal */
+    --accent-foreground: 175 25% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 175 41% 29%;
+    --chart-1: 175 41% 29%;
+    --chart-2: 175 51% 39%;
+    --chart-3: 175 61% 49%;
+    --chart-4: 175 71% 59%;
+    --chart-5: 175 81% 69%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 210 40% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 275 100% 75%; /* Lighter indigo for dark mode */
-    --primary-foreground: 275 100% 15%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 283 100% 62%; /* Lighter violet for dark mode */
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 275 100% 75%;
-    --chart-1: 275 100% 75%;
-    --chart-2: 275 90% 65%;
-    --chart-3: 275 80% 55%;
-    --chart-4: 283 90% 60%;
-    --chart-5: 283 80% 50%;
+    --background: 220 9% 10%;
+    --foreground: 220 13% 98%;
+    --card: 220 9% 10%;
+    --card-foreground: 220 13% 98%;
+    --popover: 220 9% 10%;
+    --popover-foreground: 220 13% 98%;
+    --primary: 175 55% 45%; /* Bright Teal for dark mode */
+    --primary-foreground: 175 25% 95%;
+    --secondary: 220 9% 15%;
+    --secondary-foreground: 220 13% 98%;
+    --muted: 220 9% 15%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 175 41% 29%; /* Dark Teal for dark mode */
+    --accent-foreground: 175 25% 95%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 9% 15%;
+    --input: 220 9% 15%;
+    --ring: 175 55% 45%;
+    --chart-1: 175 55% 45%;
+    --chart-2: 175 65% 55%;
+    --chart-3: 175 75% 65%;
+    --chart-4: 175 85% 75%;
+    --chart-5: 175 95% 85%;
   }
 }
 
@@ -71,18 +71,19 @@ body {
     @apply bg-background text-foreground;
   }
 
-  body.homepage-bg {
-    background-image: url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  body.homepage-bg,
+  body.careers-page-bg {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
   
+  body.homepage-bg {
+    background-image: url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+
   body.careers-page-bg {
     background-image: url('https://images.unsplash.com/photo-1691178548430-6dc9774f414c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
 }
 
