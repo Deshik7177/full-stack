@@ -9,57 +9,57 @@ body {
 
 @layer base {
   :root {
-    --background: 220 13% 98%; /* Light Gray */
-    --foreground: 220 9% 10%;
-    --card: 220 13% 100%;
-    --card-foreground: 220 9% 10%;
-    --popover: 220 13% 100%;
-    --popover-foreground: 220 9% 10%;
-    --primary: 145 35% 35%; /* Dark Green */
-    --primary-foreground: 145 20% 95%;
-    --secondary: 220 13% 91%;
-    --secondary-foreground: 220 9% 10%;
-    --muted: 220 13% 91%;
-    --muted-foreground: 220 9% 40%;
-    --accent: 145 55% 45%; /* Bright Green */
-    --accent-foreground: 145 20% 95%;
+    --background: 210 20% 98%;
+    --foreground: 210 10% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+    --primary: 24 84% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 210 10% 23%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 24 90% 60%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 145 35% 35%;
-    --chart-1: 145 35% 35%;
-    --chart-2: 145 45% 45%;
-    --chart-3: 145 55% 55%;
-    --chart-4: 145 65% 65%;
-    --chart-5: 145 75% 75%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 24 84% 50%;
+    --chart-1: 24 84% 50%;
+    --chart-2: 24 80% 60%;
+    --chart-3: 24 76% 70%;
+    --chart-4: 24 72% 80%;
+    --chart-5: 24 68% 90%;
   }
 
   .dark {
-    --background: 220 9% 10%;
-    --foreground: 220 13% 98%;
-    --card: 220 9% 10%;
-    --card-foreground: 220 13% 98%;
-    --popover: 220 9% 10%;
-    --popover-foreground: 220 13% 98%;
-    --primary: 145 55% 45%; /* Bright Green for dark mode */
-    --primary-foreground: 145 20% 95%;
-    --secondary: 220 9% 15%;
-    --secondary-foreground: 220 13% 98%;
-    --muted: 220 9% 15%;
-    --muted-foreground: 220 9% 60%;
-    --accent: 145 35% 35%; /* Dark Green for dark mode */
-    --accent-foreground: 145 Prou20% 95%;
+    --background: 210 10% 15%;
+    --foreground: 210 20% 98%;
+    --card: 210 10% 15%;
+    --card-foreground: 210 20% 98%;
+    --popover: 210 10% 15%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 24 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 20%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 210 10% 20%;
+    --muted-foreground: 210 20% 60%;
+    --accent: 24 84% 50%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 9% 15%;
-    --input: 220 9% 15%;
-    --ring: 145 55% 45%;
-    --chart-1: 145 55% 45%;
-    --chart-2: 145 65% 55%;
-    --chart-3: 145 75% 65%;
-    --chart-4: 145 85% 75%;
-    --chart-5: 145 95% 85%;
+    --border: 210 10% 20%;
+    --input: 210 10% 20%;
+    --ring: 24 90% 60%;
+    --chart-1: 24 90% 60%;
+    --chart-2: 24 85% 65%;
+    --chart-3: 24 80% 70%;
+    --chart-4: 24 75% 75%;
+    --chart-5: 24 70% 80%;
   }
 }
 
