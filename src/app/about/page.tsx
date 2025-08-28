@@ -35,14 +35,14 @@ export default function AboutPage() {
     return (
         <div>
             <PageHeader
-                title="About ATC Academy"
+                title="About Sytecx Labs"
                 subtitle="We're a creative and technological playground where future engineers, filmmakers, and digital leaders are shaped."
             />
             <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
                 <section className="text-center max-w-4xl mx-auto">
                     <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Mission</h2>
                     <p className="text-lg text-muted-foreground">
-                        At ATC Academy, we believe that every student has the power to create, innovate, and lead with impact. Our mission is to bridge the gap between classroom knowledge and real-world skills by offering hands-on, project-driven learning from Class 4 to BTech. Students dive deep into Robotics, Drones, IoT Embedded Systems, Industrial Electronics, and now the dynamic worlds of Digital Marketing and Filmmaking Techniques.
+                        At Sytecx Labs, we believe that every student has the power to create, innovate, and lead with impact. Our mission is to bridge the gap between classroom knowledge and real-world skills by offering hands-on, project-driven learning from Class 4 to BTech. Students dive deep into Robotics, Drones, IoT Embedded Systems, Industrial Electronics, and now the dynamic worlds of Digital Marketing and Filmmaking Techniques.
                     </p>
                     <p className="text-lg text-muted-foreground mt-4">
                         From building their own STEM kits and aerial drones to producing cinematic short films and mastering growth marketing strategies, our students aren’t just studying concepts—they’re solving real problems, telling impactful stories, and building their personal brand along the way.
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 <section className="text-center max-w-4xl mx-auto">
                     <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Vision</h2>
                      <p className="text-lg text-muted-foreground">
-                        Our vision at ATC Academy is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—from Class 4 to BTech—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
+                        Our vision at Sytecx Labs is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—from Class 4 to BTech—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
                     </p>
                 </section>
 
