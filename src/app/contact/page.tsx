@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -41,37 +42,37 @@ export default function ContactPage() {
             transition={{ delay: 0.2 }}
           >
             <div>
-              <h2 className="font-headline text-3xl font-bold text-primary">Get in Touch</h2>
-              <p className="mt-2 text-muted-foreground">
+              <h2 className="font-headline text-3xl font-bold text-white">Get in Touch</h2>
+              <p className="mt-2 text-gray-200">
                 Find us at our office, send us an email, or give us a call.
               </p>
             </div>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary mt-1 p-3 rounded-md">
+                <div className="bg-primary/10 text-white mt-1 p-3 rounded-md">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">Our Office</h3>
-                  <p className="text-muted-foreground">123 Tech Street, Silicon Valley, CA 94000</p>
+                  <h3 className="text-xl font-semibold text-white">Our Office</h3>
+                  <p className="text-gray-200">123 Tech Street, Silicon Valley, CA 94000</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary mt-1 p-3 rounded-md">
+                <div className="bg-primary/10 text-white mt-1 p-3 rounded-md">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">Email Us</h3>
-                  <p className="text-muted-foreground">contact@sytecxlabs.com</p>
+                  <h3 className="text-xl font-semibold text-white">Email Us</h3>
+                  <p className="text-gray-200">contact@sytecxlabs.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary mt-1 p-3 rounded-md">
+                <div className="bg-primary/10 text-white mt-1 p-3 rounded-md">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h3 className="text-xl font-semibold text-white">Call Us</h3>
+                  <p className="text-gray-200">+1 (555) 123-4567</p>
                 </div>
               </div>
             </div>
