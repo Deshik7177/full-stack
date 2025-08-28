@@ -12,8 +12,7 @@ import { TeamMemberCard } from "@/components/team-member-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const techServices = services.filter(s => s.category === 'Technology & Innovation');
-const creativeServices = services.filter(s => s.category === 'Creative Solutions');
+const allServices = services.filter(s => s.category === 'Technology & Innovation' || s.category === 'Creative Solutions');
 
 const podcastStats = [
     {
@@ -64,7 +63,7 @@ export default function AboutPage() {
                         We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
                     </p>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {techServices.map((service, index) => (
+                        {allServices.map((service, index) => (
                             <motion.div
                                 key={service.title}
                                 initial={{ opacity: 0, y: 20 }}
@@ -72,7 +71,7 @@ export default function AboutPage() {
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Card className="h-full text-center bg-background/80 text-foreground">
+                                <Card className="h-full text-center bg-card/80 text-card-foreground">
                                     <CardHeader className="items-center">
                                         <div className="bg-primary/10 text-primary p-4 rounded-full">
                                             <service.icon className="h-8 w-8" />
@@ -85,27 +84,6 @@ export default function AboutPage() {
                                 </Card>
                             </motion.div>
                         ))}
-                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 gap-8"
-                        >
-                            {creativeServices.map((service) => (
-                                 <Card className="h-full bg-background/80 text-foreground" key={service.title}>
-                                    <CardHeader className="items-center text-center">
-                                         <div className="bg-primary/10 text-primary p-4 rounded-full">
-                                             <service.icon className="h-8 w-8" />
-                                         </div>
-                                        <h3 className="font-headline text-xl font-semibold pt-2">{service.title}</h3>
-                                    </CardHeader>
-                                    <CardContent className="text-center">
-                                        <p className="text-muted-foreground">{service.description}</p>
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </motion.div>
                     </div>
                 </section>
                 
@@ -130,7 +108,7 @@ export default function AboutPage() {
                              {podcastStats.map((stat) => (
                                  <div key={stat.label} className="bg-background/50 rounded-lg p-4 flex flex-col items-center justify-center">
                                     <stat.icon className="h-10 w-10 text-primary mb-2"/>
-                                    <p className="text-2xl font-bold">{stat.value}</p>
+                                    <p className="text-2xl font-bold text-white">{stat.value}</p>
                                     <p className="text-sm text-muted-foreground">{stat.label}</p>
                                  </div>
                              ))}
