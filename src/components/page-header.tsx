@@ -16,16 +16,17 @@ export function PageHeader({ title, subtitle, backgroundImage }: PageHeaderProps
   return (
     <section 
       className={cn(
-        "py-16 md:py-20 bg-secondary",
+        "py-16 md:py-20 bg-secondary relative",
         backgroundImage && "bg-cover bg-center bg-no-repeat"
       )}
       style={sectionStyle}
     >
+      {backgroundImage && <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto px-4 text-center"
+        className="container mx-auto px-4 text-center relative z-10"
       >
         <h1 className={cn(
           "font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl",

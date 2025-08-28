@@ -39,6 +39,7 @@ export default function AboutPage() {
             <PageHeader
                 title="About Sytecx Labs"
                 subtitle="We're a creative and technological playground where future engineers, filmmakers, and digital leaders are shaped."
+                backgroundImage="https://images.unsplash.com/photo-1660902243601-28e451a873ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
                 <section className="text-center max-w-4xl mx-auto">
@@ -158,5 +159,3 @@ export default function AboutPage() {
         </div>
     );
 }
-
-    
