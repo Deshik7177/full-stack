@@ -121,7 +121,7 @@ export default function AboutPage() {
                                 This channel is your place for everything that catches your interest, spoken in our own Telugu English. From the exciting world of movies to the critical discussions on politics, entertaining content, and the latest current social issues , technology , Business, culture etc.
                              </p>
                             <Button asChild>
-                                <Link href="https://www.youtube.com/@TheATCPodcasters" target="_blank" rel="noopener noreferrer">
+                                <Link href="https://www.youtube.com/@ATC.Podcasters" target="_blank" rel="noopener noreferrer">
                                     Visit Channel <ArrowRight className="ml-2 h-5 w-5" />
                                 </Link>
                             </Button>
