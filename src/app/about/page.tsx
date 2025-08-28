@@ -39,29 +39,28 @@ export default function AboutPage() {
             <PageHeader
                 title="About Sytecx Labs"
                 subtitle="We're a creative and technological playground where future engineers, filmmakers, and digital leaders are shaped."
-                backgroundImage="https://images.unsplash.com/photo-1660902243601-28e451a873ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
                 <section className="text-center max-w-4xl mx-auto">
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Mission</h2>
-                    <p className="text-lg text-muted-foreground">
+                    <h2 className="font-headline text-3xl font-bold text-white mb-4">Our Mission</h2>
+                    <p className="text-lg text-gray-200">
                         At Sytecx Labs, we believe that every student has the power to create, innovate, and lead with impact. Our mission is to bridge the gap between classroom knowledge and real-world skills by offering hands-on, project-driven learning from Class 4 to BTech. Students dive deep into Robotics, Drones, IoT Embedded Systems, Industrial Electronics, and now the dynamic worlds of Digital Marketing and Filmmaking Techniques.
                     </p>
-                    <p className="text-lg text-muted-foreground mt-4">
+                    <p className="text-lg text-gray-200 mt-4">
                         From building their own STEM kits and aerial drones to producing cinematic short films and mastering growth marketing strategies, our students aren’t just studying concepts—they’re solving real problems, telling impactful stories, and building their personal brand along the way.
                     </p>
                 </section>
                 
                 <section className="text-center max-w-4xl mx-auto">
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-4">Our Vision</h2>
-                     <p className="text-lg text-muted-foreground">
+                    <h2 className="font-headline text-3xl font-bold text-white mb-4">Our Vision</h2>
+                     <p className="text-lg text-gray-200">
                         Our vision at Sytecx Labs is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—from Class 4 to BTech—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">What We Do?</h2>
-                    <p className="text-center max-w-3xl mx-auto text-lg text-muted-foreground mb-12">
+                    <h2 className="font-headline text-3xl font-bold text-white mb-12 text-center">What We Do?</h2>
+                    <p className="text-center max-w-3xl mx-auto text-lg text-gray-200 mb-12">
                         We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
                     </p>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -73,7 +72,7 @@ export default function AboutPage() {
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Card className="h-full text-center">
+                                <Card className="h-full text-center bg-background/80 text-foreground">
                                     <CardHeader className="items-center">
                                         <div className="bg-primary/10 text-primary p-4 rounded-full">
                                             <service.icon className="h-8 w-8" />
@@ -94,7 +93,7 @@ export default function AboutPage() {
                             className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 gap-8"
                         >
                             {creativeServices.map((service) => (
-                                 <Card className="h-full" key={service.title}>
+                                 <Card className="h-full bg-background/80 text-foreground" key={service.title}>
                                     <CardHeader className="items-center text-center">
                                          <div className="bg-primary/10 text-primary p-4 rounded-full">
                                              <service.icon className="h-8 w-8" />
@@ -110,7 +109,7 @@ export default function AboutPage() {
                     </div>
                 </section>
                 
-                <section className="bg-secondary rounded-lg p-8 md:p-12">
+                <section className="bg-secondary/80 rounded-lg p-8 md:p-12">
                      <div className="grid md:grid-cols-2 gap-12 items-center">
                          <div>
                              <h2 className="font-headline text-3xl font-bold text-primary mb-4">The ATC Podcasters</h2>
@@ -140,7 +139,7 @@ export default function AboutPage() {
                 </section>
 
                 <section>
-                    <h2 className="font-headline text-3xl font-bold text-primary mb-12 text-center">Meet Our Team</h2>
+                    <h2 className="font-headline text-3xl font-bold text-white mb-12 text-center">Meet Our Team</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {team.map((member, index) => (
                             <motion.div
