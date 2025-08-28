@@ -41,7 +41,7 @@ export default function CareersPage() {
 
       <section className="py-20 md:py-24 bg-transparent text-white">
         <div className="container mx-auto px-4">
-            <h2 className="font-headline text-3xl font-bold mb-12 text-center">
+            <h2 className="font-headline text-3xl font-bold mb-12 text-center text-white">
               Why Join Sytecx Labs?
             </h2>
             <motion.div 
@@ -72,7 +72,7 @@ export default function CareersPage() {
 
       <section className="bg-transparent text-white py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="font-headline text-3xl font-bold mb-8 text-center">
+          <h2 className="font-headline text-3xl font-bold mb-8 text-center text-white">
             Open Positions
           </h2>
           <motion.div
@@ -94,7 +94,7 @@ export default function CareersPage() {
             )}
           </motion.div>
           <div className="text-center mt-4">
-             <Link href="/contact" className="text-sm hover:underline">
+             <Link href="/contact" className="text-sm hover:underline text-white">
                Don't see a fit? Contact us with your resume.
              </Link>
            </div>
@@ -110,11 +110,11 @@ export default function CareersPage() {
               transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto"
             >
-              <Trophy className="h-12 w-12 mx-auto mb-4" />
-              <blockquote className="font-headline text-2xl md:text-3xl italic">
+              <Trophy className="h-12 w-12 mx-auto mb-4 text-white" />
+              <blockquote className="font-headline text-2xl md:text-3xl italic text-white">
                 "Our investment in strategic talent development and the linking of learning to career development have energized our workforce. Our empowering, performance-driven work culture is helping us attract local talent across all our key markets."
               </blockquote>
-              <p className="mt-6 font-semibold">- xxxxxxx, Chief Human Resources Officer</p>
+              <p className="mt-6 font-semibold text-white">- xxxxxxx, Chief Human Resources Officer</p>
             </motion.div>
         </div>
       </section>
