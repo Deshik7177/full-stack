@@ -6,9 +6,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Users, Youtube, View } from "lucide-react";
+import { Users, Youtube, View, ArrowRight } from "lucide-react";
 import { team, services } from "@/lib/data";
 import { TeamMemberCard } from "@/components/team-member-card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const techServices = services.filter(s => s.category === 'Technology & Innovation');
 const creativeServices = services.filter(s => s.category === 'Creative Solutions');
@@ -115,9 +117,14 @@ export default function AboutPage() {
                              <p className="text-lg text-muted-foreground mb-4">
                                 We're more than a channel; we're a growing family of Telugu AND other language speakers who love to explore and discuss a variety of subjects. Our goal is to entertain, inform, and bring everyone closer through meaningful content.
                              </p>
-                              <p className="text-muted-foreground">
+                              <p className="text-muted-foreground mb-6">
                                 This channel is your place for everything that catches your interest, spoken in our own Telugu English. From the exciting world of movies to the critical discussions on politics, entertaining content, and the latest current social issues , technology , Business, culture etc.
                              </p>
+                            <Button asChild>
+                                <Link href="https://www.youtube.com/@TheATCPodcasters" target="_blank" rel="noopener noreferrer">
+                                    Visit Channel <ArrowRight className="ml-2 h-5 w-5" />
+                                </Link>
+                            </Button>
                          </div>
                          <div className="grid grid-cols-3 gap-4 text-center">
                              {podcastStats.map((stat) => (
@@ -151,3 +158,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
