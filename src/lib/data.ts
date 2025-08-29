@@ -94,7 +94,70 @@ export const services: Service[] = [
     slug: "stem-education",
     tagline: "Inspiring the next generation of innovators.",
     description: "We deliver engaging and interactive STEM education programs designed to cultivate curiosity and build critical skills for the future.",
-    longDescription: "Our STEM education programs are designed to make learning engaging, interactive, and relevant. We offer a range of workshops and courses in robotics, coding, and engineering, providing students with hands-on experience and the problem-solving skills needed to excel in a technology-driven world. Our goal is to inspire the next generation of scientists, engineers, and innovators.",
+    longDescription: `
+Flexible, Department-Wise Workshops
+1. We conduct workshops based on the school timetable and availability of departments.
+2. Each session is custom-tailored for specific from class (4-10)
+
+Focus area:
+1. Introducing Robotics
+2. Space Technology
+3. Drones Technology
+4. Surface & underwater technologies
+
+At Sytecx Labs, we empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.
+
+Class 4–5: Foundation & Curiosity
+Robotics: Introduction to Robots, Daily life applications, Simple DIY robots
+Space Technology: Stories of rockets & satellites, ISRO missions, Paper rocket experiments
+Water Technology: Water cycle models, Basic purification experiments
+Drone Technology: Introduction to drones, Build-your-own glider models
+
+Class 6–7: Concept Building & Exploration
+Robotics: Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots
+Space Technology: Solar system & satellite types, Satellite communication models
+Water Technology: Rainwater harvesting, Water level indicators using sensors
+Drone Technology: Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue
+
+Class 8–10: Application & Innovation
+Robotics: Microcontroller coding (Arduino), Smart robotics projects, Real-world automation
+Space Technology: Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning
+Water Technology: Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions
+Drone Technology: Drone assembling, GPS navigation programming, Precision agriculture & mapping
+
+Skill Development Includes:
+- Block & Text-based Coding (Scratch, Arduino, Python)
+- Hands-on Electronics & Sensor Integration
+- Real-world Problem Solving through Projects
+- Design Thinking & 21st Century Skills
+- Participation in Competitions & Innovation Fairs
+
+For Engineering Colleges:
+Flexible, Department-Wise Workshops
+- We conduct workshops based on the college timetable and availability of departments.
+- Each session is custom-tailored for specific streams like ECE, CSE, EEE, Mech, AI/ML, etc.
+
+For ECE/EEE:
+Workshop Focus: Embedded Systems, Robotics Hardware & Microcontrollers
+Topics Covered:
+- Registered Microcontroller Programming (ARM Cortex, STM32, ESP32)
+- Microprocessor Architecture & Interfacing
+- Sensor Integration (IR, Ultrasonic, LiDAR)
+- Real-time Robotics Hardware Projects (Line Follower, Obstacle Avoider, IoT-based bots)
+- Introduction to ROS 2 Communication System (Publisher/Subscriber, Services)
+Tools: Arduino, ESP32, Embedded C, Python (rclpy), ROS 2 Foxy
+
+For CSE/ECE:
+Workshop Focus: Software Side of Robotics & Automation
+Topics Covered:
+- ROS 2 Foxy Setup & Workspace
+- Python-based Node Development (Publisher, Subscriber, Services, Actions)
+- ROS 2 Launch Files and Parameters
+- SLAM Toolbox for Mapping & Localization
+- Nav2 Stack for Autonomous Navigation
+- Final Mini Project: Mapping + Navigation in Simulation
+Tools: ROS 2 Foxy, Ubuntu 20.04, Python, Gazebo, RViz2, SLAM Toolbox
+    `,
     icon: FlaskConical,
     category: "Education & Training",
     images: [
