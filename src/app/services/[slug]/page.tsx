@@ -35,9 +35,10 @@ export default function ServicePage({ params }: ServicePageProps) {
         >
           <div>
             <Badge className="mb-4">{service.category}</Badge>
-            <p className="text-lg text-muted-foreground whitespace-pre-line leading-relaxed">
-              {service.longDescription}
-            </p>
+            <div
+              className="prose prose-invert max-w-none text-lg text-muted-foreground whitespace-pre-line leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: service.longDescription }}
+            />
           </div>
 
           {service.images && service.images.length > 0 && (

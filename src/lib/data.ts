@@ -56,7 +56,7 @@ export const services: Service[] = [
     title: "Drone Services",
     slug: "drone-services",
     tagline: "A new perspective from the sky.",
-    description: "We offer specialized drone solutions, including custom-built RC drones for enthusiasts and advanced aerial advertisement drones for marketing.",
+    description: "We offer specialized drone solutions, including custom-built RC drones and advanced aerial advertisement drones for marketing.",
     longDescription: "Our drone services offer cutting-edge solutions for a variety of applications. We design and build custom drones tailored to specific needs, from high-performance racing drones for enthusiasts to sophisticated aerial systems for commercial photography and marketing. Our expertise covers everything from frame design and component selection to flight control programming and payload integration.",
     icon: Rocket,
     category: "Technology & Innovation",
@@ -95,68 +95,92 @@ export const services: Service[] = [
     tagline: "Inspiring the next generation of innovators.",
     description: "We deliver engaging and interactive STEM education programs designed to cultivate curiosity and build critical skills for the future.",
     longDescription: `
-Flexible, Department-Wise Workshops
-1. We conduct workshops based on the school timetable and availability of departments.
-2. Each session is custom-tailored for specific from class (4-10)
+      <h3 class="font-headline text-2xl font-bold text-primary mb-4">Flexible, Department-Wise Workshops (Schools)</h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>We conduct workshops based on the school timetable and availability of departments.</li>
+        <li>Each session is custom-tailored for specific from class (4-10)</li>
+      </ul>
+      <h4 class="font-headline text-xl font-bold text-primary mb-3">Focus Area:</h4>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Introducing Robotics</li>
+        <li>Space Technology</li>
+        <li>Drones Technology</li>
+        <li>Surface & underwater technologies</li>
+      </ul>
+      <p class="mb-8">At Sytecx Labs, we empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.</p>
+      
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 4–5: Foundation & Curiosity</h4>
+          <p><strong>Robotics:</strong> Introduction to Robots, Daily life applications, Simple DIY robots</p>
+          <p><strong>Space Technology:</strong> Stories of rockets & satellites, ISRO missions, Paper rocket experiments</p>
+          <p><strong>Water Technology:</strong> Water cycle models, Basic purification experiments</p>
+          <p><strong>Drone Technology:</strong> Introduction to drones, Build-your-own glider models</p>
+        </div>
+        
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 6–7: Concept Building & Exploration</h4>
+          <p><strong>Robotics:</strong> Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots</p>
+          <p><strong>Space Technology:</strong> Solar system & satellite types, Satellite communication models</p>
+          <p><strong>Water Technology:</strong> Rainwater harvesting, Water level indicators using sensors</p>
+          <p><strong>Drone Technology:</strong> Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue</p>
+        </div>
 
-Focus area:
-1. Introducing Robotics
-2. Space Technology
-3. Drones Technology
-4. Surface & underwater technologies
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 8–10: Application & Innovation</h4>
+          <p><strong>Robotics:</strong> Microcontroller coding (Arduino), Smart robotics projects, Real-world automation</p>
+          <p><strong>Space Technology:</strong> Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning</p>
+          <p><strong>Water Technology:</strong> Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions</p>
+          <p><strong>Drone Technology:</strong> Drone assembling, GPS navigation programming, Precision agriculture & mapping</p>
+        </div>
+      </div>
 
-At Sytecx Labs, we empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.
+      <h3 class="font-headline text-2xl font-bold text-primary mt-8 mb-4">Skill Development Includes:</h3>
+      <ul class="list-disc pl-6 mb-8 space-y-2">
+        <li>Block & Text-based Coding (Scratch, Arduino, Python)</li>
+        <li>Hands-on Electronics & Sensor Integration</li>
+        <li>Real-world Problem Solving through Projects</li>
+        <li>Design Thinking & 21st Century Skills</li>
+        <li>Participation in Competitions & Innovation Fairs</li>
+      </ul>
 
-Class 4–5: Foundation & Curiosity
-Robotics: Introduction to Robots, Daily life applications, Simple DIY robots
-Space Technology: Stories of rockets & satellites, ISRO missions, Paper rocket experiments
-Water Technology: Water cycle models, Basic purification experiments
-Drone Technology: Introduction to drones, Build-your-own glider models
+      <h2 class="font-headline text-3xl font-bold text-primary mt-12 mb-6">For Engineering Colleges</h2>
+      <h3 class="font-headline text-2xl font-bold text-primary mb-4">Flexible, Department-Wise Workshops</h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+         <li>We conduct workshops based on the college timetable and availability of departments.</li>
+         <li>Each session is custom-tailored for specific streams like ECE, CSE, EEE, Mech, AI/ML, etc.</li>
+      </ul>
 
-Class 6–7: Concept Building & Exploration
-Robotics: Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots
-Space Technology: Solar system & satellite types, Satellite communication models
-Water Technology: Rainwater harvesting, Water level indicators using sensors
-Drone Technology: Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue
+      <div class="space-y-8">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-3">For ECE/EEE:</h4>
+          <p><strong>Workshop Focus:</strong> Embedded Systems, Robotics Hardware & Microcontrollers</p>
+          <p><strong>Topics Covered:</strong></p>
+          <ul class="list-disc pl-8 mt-2 space-y-1">
+            <li>Registered Microcontroller Programming (ARM Cortex, STM32, ESP32)</li>
+            <li>Microprocessor Architecture & Interfacing</li>
+            <li>Sensor Integration (IR, Ultrasonic, LiDAR)</li>
+            <li>Real-time Robotics Hardware Projects (Line Follower, Obstacle Avoider, IoT-based bots)</li>
+            <li>Introduction to ROS 2 Communication System (Publisher/Subscriber, Services)</li>
+          </ul>
+          <p class="mt-2"><strong>Tools:</strong> Arduino, ESP32, Embedded C, Python (rclpy), ROS 2 Foxy</p>
+        </div>
 
-Class 8–10: Application & Innovation
-Robotics: Microcontroller coding (Arduino), Smart robotics projects, Real-world automation
-Space Technology: Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning
-Water Technology: Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions
-Drone Technology: Drone assembling, GPS navigation programming, Precision agriculture & mapping
-
-Skill Development Includes:
-- Block & Text-based Coding (Scratch, Arduino, Python)
-- Hands-on Electronics & Sensor Integration
-- Real-world Problem Solving through Projects
-- Design Thinking & 21st Century Skills
-- Participation in Competitions & Innovation Fairs
-
-For Engineering Colleges:
-Flexible, Department-Wise Workshops
-- We conduct workshops based on the college timetable and availability of departments.
-- Each session is custom-tailored for specific streams like ECE, CSE, EEE, Mech, AI/ML, etc.
-
-For ECE/EEE:
-Workshop Focus: Embedded Systems, Robotics Hardware & Microcontrollers
-Topics Covered:
-- Registered Microcontroller Programming (ARM Cortex, STM32, ESP32)
-- Microprocessor Architecture & Interfacing
-- Sensor Integration (IR, Ultrasonic, LiDAR)
-- Real-time Robotics Hardware Projects (Line Follower, Obstacle Avoider, IoT-based bots)
-- Introduction to ROS 2 Communication System (Publisher/Subscriber, Services)
-Tools: Arduino, ESP32, Embedded C, Python (rclpy), ROS 2 Foxy
-
-For CSE/ECE:
-Workshop Focus: Software Side of Robotics & Automation
-Topics Covered:
-- ROS 2 Foxy Setup & Workspace
-- Python-based Node Development (Publisher, Subscriber, Services, Actions)
-- ROS 2 Launch Files and Parameters
-- SLAM Toolbox for Mapping & Localization
-- Nav2 Stack for Autonomous Navigation
-- Final Mini Project: Mapping + Navigation in Simulation
-Tools: ROS 2 Foxy, Ubuntu 20.04, Python, Gazebo, RViz2, SLAM Toolbox
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-3">For CSE/ECE:</h4>
+          <p><strong>Workshop Focus:</strong> Software Side of Robotics & Automation</p>
+          <p><strong>Topics Covered:</strong></p>
+          <ul class="list-disc pl-8 mt-2 space-y-1">
+            <li>ROS 2 Foxy Setup & Workspace</li>
+            <li>Python-based Node Development (Publisher, Subscriber, Services, Actions)</li>
+            <li>ROS 2 Launch Files and Parameters</li>
+            <li>SLAM Toolbox for Mapping & Localization</li>
+            <li>Nav2 Stack for Autonomous Navigation</li>
+            <li>Final Mini Project: Mapping + Navigation in Simulation</li>
+          </ul>
+          <p class="mt-2"><strong>Tools:</strong> ROS 2 Foxy, Ubuntu 20.04, Python, Gazebo, RViz2, SLAM Toolbox</p>
+        </div>
+      </div>
     `,
     icon: FlaskConical,
     category: "Education & Training",

@@ -20,6 +20,35 @@ export default {
         body: ['var(--font-inter)', 'sans-serif'],
         headline: ['var(--font-space-grotesk)', 'sans-serif'],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'h1, h2, h3, h4, h5, h6': {
+              color: theme('colors.primary.DEFAULT'),
+              fontFamily: theme('fontFamily.headline').join(', '),
+            },
+            strong: {
+              color: theme('colors.foreground'),
+            },
+          },
+        },
+        invert: {
+           css: {
+            'h1, h2, h3, h4, h5, h6': {
+              color: theme('colors.primary.DEFAULT'),
+            },
+            p: {
+                color: theme('colors.muted.foreground'),
+            },
+            strong: {
+              color: theme('colors.foreground'),
+            },
+            ul: {
+                color: theme('colors.muted.foreground'),
+            },
+           },
+        },
+      }),
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -91,5 +120,8 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+],
 } satisfies Config;
