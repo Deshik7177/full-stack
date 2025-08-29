@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -9,11 +10,23 @@ import { CustomCursor } from "@/components/custom-cursor";
 import "./globals.css";
 import { Body } from "@/components/body";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
+
 // Metadata can't be in a client component, so we export it separately.
 // Next.js will still pick it up.
 export const metadata: Metadata = {
   title: "Sytecx Labs Hub",
-  description: "Innovative Solutions for a Digital World",
+  description: "Sytecx Labs: Innovative Solutions for a Digital World. We build beautiful, functional, and scalable web applications and provide cutting-edge STEM education.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -26,15 +39,8 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head />
       <Body>
         <ThemeProvider
           attribute="class"

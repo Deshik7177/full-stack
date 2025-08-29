@@ -3,63 +3,59 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 10% 23%;
+    --background: 220 20% 98%; /* Lighter Gray */
+    --foreground: 220 10% 23%; /* Dark Gray */
     --card: 0 0% 100%;
-    --card-foreground: 210 10% 23%;
+    --card-foreground: 220 10% 23%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 24 84% 50%;
+    --popover-foreground: 220 10% 23%;
+    --primary: 260 80% 50%; /* Deep Indigo */
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 20% 94%;
-    --secondary-foreground: 210 10% 23%;
-    --muted: 210 20% 94%;
-    --muted-foreground: 210 10% 45%;
-    --accent: 24 90% 60%;
+    --secondary: 220 20% 94%; /* Light Gray */
+    --secondary-foreground: 220 10% 23%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 280 90% 60%; /* Vibrant Violet */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 24 84% 50%;
-    --chart-1: 24 84% 50%;
-    --chart-2: 24 80% 60%;
-    --chart-3: 24 76% 70%;
-    --chart-4: 24 72% 80%;
-    --chart-5: 24 68% 90%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 260 80% 50%;
+    --chart-1: 260 80% 50%;
+    --chart-2: 260 75% 60%;
+    --chart-3: 260 70% 70%;
+    --chart-4: 260 65% 80%;
+    --chart-5: 260 60% 90%;
   }
 
   .dark {
-    --background: 210 10% 15%;
-    --foreground: 210 20% 98%;
-    --card: 210 10% 15%;
-    --card-foreground: 210 20% 98%;
-    --popover: 210 10% 15%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 24 90% 60%;
+    --background: 220 10% 10%; /* Very Dark Gray */
+    --foreground: 220 20% 98%; /* Light Gray */
+    --card: 220 10% 15%; /* Dark Gray */
+    --card-foreground: 220 20% 98%;
+    --popover: 220 10% 15%;
+    --popover-foreground: 220 20% 98%;
+    --primary: 260 90% 70%; /* Brighter Indigo */
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 10% 20%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 210 10% 20%;
-    --muted-foreground: 210 20% 60%;
-    --accent: 24 84% 50%;
+    --secondary: 220 10% 20%; /* Darker Gray */
+    --secondary-foreground: 220 20% 98%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 20% 60%;
+    --accent: 280 90% 65%; /* Brighter Violet */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 10% 20%;
-    --input: 210 10% 20%;
-    --ring: 24 90% 60%;
-    --chart-1: 24 90% 60%;
-    --chart-2: 24 85% 65%;
-    --chart-3: 24 80% 70%;
-    --chart-4: 24 75% 75%;
-    --chart-5: 24 70% 80%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 260 90% 70%;
+    --chart-1: 260 90% 70%;
+    --chart-2: 260 85% 75%;
+    --chart-3: 260 80% 80%;
+    --chart-4: 260 75% 85%;
+    --chart-5: 260 70% 90%;
   }
 }
 
@@ -71,40 +67,32 @@ body {
     @apply bg-background text-foreground;
   }
 
-  body.homepage-bg,
   body.careers-page-bg,
   body.about-page-bg {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
-  
-  body.homepage-bg {
-    background-image: url('https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
 
   body.careers-page-bg {
-    background-image: url('https://images.unsplash.com/photo-1691178548430-6dc9774f414c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1691178548430-6dc9774f414c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   }
   
   body.about-page-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1660902243601-28e451a873ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1660902243601-28e451a873ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   }
 }
 
-.homepage-bg main > div > section,
 .careers-page-bg main > div > section,
 .about-page-bg main > div > section {
     background-color: transparent !important;
 }
 
-.homepage-bg .text-white,
 .careers-page-bg .text-white,
 .about-page-bg .text-white {
   color: white;
 }
 
-.homepage-bg .text-gray-200,
 .careers-page-bg .text-gray-200,
 .about-page-bg .text-gray-200 {
   color: #e5e7eb; /* Fallback for gray-200 */

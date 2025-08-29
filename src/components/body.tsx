@@ -10,7 +10,6 @@ export function Body({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
   const isCareersPage = pathname === '/careers';
   const isAboutPage = pathname === '/about';
 
@@ -18,7 +17,6 @@ export function Body({
       <body 
         className={cn(
           "font-body antialiased",
-          isHomePage && "homepage-bg",
           isCareersPage && "careers-page-bg",
           isAboutPage && "about-page-bg"
         )}

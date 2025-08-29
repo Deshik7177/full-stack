@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Users, Lightbulb, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -51,8 +52,17 @@ export default function Home() {
 
   return (
     <div>
-      <section className="h-screen flex items-center justify-center text-white bg-transparent">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative h-screen flex items-center justify-center text-white bg-black">
+        <Image
+          src="https://images.unsplash.com/photo-1615019048436-13226b62d7e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Abstract technology background"
+          fill
+          priority
+          className="object-cover z-0"
+          data-ai-hint="abstract technology"
+        />
+        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="container mx-auto px-4 text-center z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +96,7 @@ export default function Home() {
 
       <motion.section
         id="services"
-        className="py-20 md:py-24 bg-transparent text-white"
+        className="py-20 md:py-24 bg-background text-foreground"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -97,7 +107,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
               Our Services
             </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
+            <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
               We offer a wide range of services to help you achieve your goals.
             </p>
           </div>
@@ -122,7 +132,7 @@ export default function Home() {
             </Carousel>
           </div>
           <div className="mt-12 text-center">
-            <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
+            <Button asChild size="lg" variant="link">
               <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
@@ -131,7 +141,7 @@ export default function Home() {
 
       <motion.section
         id="projects"
-        className="py-20 md:py-24 bg-transparent text-white"
+        className="py-20 md:py-24 bg-secondary text-foreground"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -142,7 +152,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
               Recent Projects
             </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
+            <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
               Check out some of the amazing work we've delivered.
             </p>
           </div>
@@ -167,7 +177,7 @@ export default function Home() {
             </Carousel>
           </div>
           <div className="mt-12 text-center">
-            <Button asChild size="lg" variant="link" className="text-white hover:text-gray-200">
+            <Button asChild size="lg" variant="link">
               <Link href="/projects">View All Projects <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
@@ -176,7 +186,7 @@ export default function Home() {
 
       <motion.section
         id="why-us"
-        className="py-20 md:py-24 bg-transparent text-white"
+        className="py-20 md:py-24 bg-background text-foreground"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -185,7 +195,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Choose Us?</h2>
-            <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-200">
+            <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
               We are more than just a service provider; we are your strategic partner in innovation.
             </p>
           </div>
@@ -198,7 +208,7 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5 }}
               >
-                <Card className="h-full text-center bg-background/80 text-foreground">
+                <Card className="h-full text-center bg-card text-card-foreground">
                   <CardHeader className="items-center">
                     <div className="bg-primary/10 text-primary p-4 rounded-full">
                       <item.icon className="h-8 w-8" />
@@ -216,7 +226,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="py-20 md:py-24 bg-transparent text-white"
+        className="py-20 md:py-24 bg-secondary text-foreground"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -226,11 +236,11 @@ export default function Home() {
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
               Ready to start a project?
             </h2>
-            <p className="mt-3 max-w-xl mx-auto text-lg text-gray-200">
+            <p className="mt-3 max-w-xl mx-auto text-lg text-muted-foreground">
               Let's build something amazing together. Get in touch with us today.
             </p>
             <div className="mt-8">
-              <Button asChild size="lg" variant="secondary">
+              <Button asChild size="lg">
                 <Link href="/contact">
                   Let's Talk
                 </Link>
