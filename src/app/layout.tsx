@@ -27,9 +27,6 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Sytecx Labs Hub",
   description: "Sytecx Labs: Innovative Solutions for a Digital World. We build beautiful, functional, and scalable web applications and provide cutting-edge STEM education.",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
