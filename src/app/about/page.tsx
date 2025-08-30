@@ -53,14 +53,14 @@ export default function AboutPage() {
                 <section className="text-center max-w-4xl mx-auto">
                     <h2 className="font-headline text-3xl font-bold text-white mb-4">Our Vision</h2>
                      <p className="text-lg text-gray-200">
-                        Our vision at Sytecx Labs is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—from Class 4 to BTech—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
+                        Our vision at Sytecx Labs is to empower students with real-world skills, creative confidence, and the mindset to build meaningful solutions. We aim to transform young minds—into innovators, problem-solvers, and storytellers through hands-on education in Robotics, Drones, IoT, Embedded Systems, Industrial Electronics, Filmmaking, and Digital Marketing. We don’t just teach subjects. We nurture creators who can design, build, market, and lead in tomorrow’s world.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="font-headline text-3xl font-bold text-white mb-12 text-center">What We Do?</h2>
                     <p className="text-center max-w-3xl mx-auto text-lg text-gray-200 mb-12">
-                        We provide practical STEM education from Class 4 to BTech, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
+                        We provide practical STEM education, focusing on real-world sectors. Our hands-on approach covers everything from drone technology and filmmaking to digital marketing.
                     </p>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {allServices.map((service, index) => (
