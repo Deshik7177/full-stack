@@ -68,7 +68,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
               Sytecx Labs
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
