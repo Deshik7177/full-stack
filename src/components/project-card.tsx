@@ -37,7 +37,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <CardContent className="flex-grow">
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
-            <Badge key={tech} variant="secondary">
+            <Badge key={tech} variant="default">
               {tech}
             </Badge>
           ))}
