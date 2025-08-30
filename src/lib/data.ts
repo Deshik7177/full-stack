@@ -134,14 +134,14 @@ export const services: Service[] = [
           <strong>Drone Technology:</strong> Drone assembling, GPS navigation programming, Precision agriculture & mapping</p>
         </div>
       </div>
-
+      
       <h3 class="font-headline text-2xl font-bold text-primary mt-8 mb-4">Skill Development Includes:</h3>
       <ul class="list-disc pl-6 mb-8 space-y-2">
-        <li>Block & Text-based Coding (Scratch, Arduino, Python)</li>
-        <li>Hands-on Electronics & Sensor Integration</li>
-        <li>Real-world Problem Solving through Projects</li>
-        <li>Design Thinking & 21st Century Skills</li>
-        <li>Participation in Competitions & Innovation Fairs</li>
+        * Block & Text-based Coding (Scratch, Arduino, Python)
+        * Hands-on Electronics & Sensor Integration
+        * Real-world Problem Solving through Projects
+        * Design Thinking & 21st Century Skills
+        * Participation in Competitions & Innovation Fairs
       </ul>
 
       <h2 class="font-headline text-3xl font-bold text-primary mt-12 mb-6">For Engineering Colleges</h2>
@@ -157,7 +157,7 @@ export const services: Service[] = [
           <p><strong>Workshop Focus:</strong> Embedded Systems, Robotics Hardware & Microcontrollers</p>
           <p><strong>Topics Covered:</strong></p>
           <ul class="list-disc pl-8 mt-2 space-y-1">
-            <li>Registered Microcontroller Programming (ARM Cortex, STM32, ESP32)</li>
+            <li>Registered Microcontroller Programming (ARM, STM32, ESP32)</li>
             <li>Microprocessor Architecture & Interfacing</li>
             <li>Sensor Integration (IR, Ultrasonic, LiDAR)</li>
             <li>Real-time Robotics Hardware Projects (Line Follower, Obstacle Avoider, IoT-based bots)</li>
@@ -222,7 +222,7 @@ export const careers: Career[] = [
 
 export const team: TeamMember[] = [
   {
-    name: "xxxxxxx",
+    name: "Chaitanya",
     role: "CEO & Founder",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait",
@@ -233,10 +233,10 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "xxxxxxx",
+    name: "Chaganti Sandeep",
     role: "Chief Technology Officer",
     image: "https://placehold.co/400x400.png",
-    dataAiHint: "woman portrait",
+    dataAiHint: "man portrait tech",
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -244,7 +244,7 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "xxxxxxx",
+    name: "Kandi Ajay Kumar",
     role: "Lead Developer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait tech",
@@ -255,10 +255,10 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "xxxxxxx",
+    name: "Kiran",
     role: "Creative Director",
     image: "https://placehold.co/400x400.png",
-    dataAiHint: "woman portrait creative",
+    dataAiHint: "man portrait creative",
     socials: {
       linkedin: "#",
       twitter: "#",
