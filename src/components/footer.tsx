@@ -46,9 +46,9 @@ export function Footer() {
           <div>
             <h3 className="font-headline font-semibold text-foreground">Contact Us</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>123 Tech Street, Silicon Valley, CA 94000</li>
+              <li>D.no 102, sri satya ragevendra arcade, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026</li>
               <li>contact@sytecxlabs.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>+91 9959316065</li>
             </ul>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -55,7 +54,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Our Office</h3>
-                  <p className="text-muted-foreground">123 Tech Street, Silicon Valley, CA 94000</p>
+                  <p className="text-muted-foreground">D.no 102, sri satya ragevendra arcade, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -73,7 +72,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 9959316065</p>
                 </div>
               </div>
             </div>
