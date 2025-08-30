@@ -136,7 +136,7 @@ export const careers: Career[] = [
 export const team: TeamMember[] = [
   {
     name: "Chaitanya",
-    role: "CEO & Founder",
+    role: "CEO",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait",
     socials: {
