@@ -94,94 +94,7 @@ export const services: Service[] = [
     slug: "stem-education",
     tagline: "Inspiring the next generation of innovators.",
     description: "We deliver engaging and interactive STEM education programs designed to cultivate curiosity and build critical skills for the future.",
-    longDescription: `
-      <h3 class="font-headline text-2xl font-bold text-primary mb-4">Flexible, Department-Wise Workshops (Schools)</h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>We conduct workshops based on the school timetable and availability of departments.</li>
-        <li>Each session is custom-tailored for specific from class (4-10)</li>
-      </ul>
-      <h4 class="font-headline text-xl font-bold text-primary mb-3">Focus Area:</h4>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Introducing Robotics</li>
-        <li>Space Technology</li>
-        <li>Drones Technology</li>
-        <li>Surface & underwater technologies</li>
-      </ul>
-      <p class="mb-8">At Sytecx Labs, we empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.</p>
-      
-      <div class="space-y-6">
-        <div>
-          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 4–5: Foundation & Curiosity</h4>
-          <p><strong>Robotics:</strong> Introduction to Robots, Daily life applications, Simple DIY robots
-          <strong>Space Technology:</strong> Stories of rockets & satellites, ISRO missions, Paper rocket experiments
-          <strong>Water Technology:</strong> Water cycle models, Basic purification experiments
-          <strong>Drone Technology:</strong> Introduction to drones, Build-your-own glider models</p>
-        </div>
-        
-        <div>
-          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 6–7: Concept Building & Exploration</h4>
-          <p><strong>Robotics:</strong> Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots
-          <strong>Space Technology:</strong> Solar system & satellite types, Satellite communication models
-          <strong>Water Technology:</strong> Rainwater harvesting, Water level indicators using sensors
-          <strong>Drone Technology:</strong> Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue</p>
-        </div>
-
-        <div>
-          <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 8–10: Application & Innovation</h4>
-          <p><strong>Robotics:</strong> Microcontroller coding (Arduino), Smart robotics projects, Real-world automation
-          <strong>Space Technology:</strong> Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning
-          <strong>Water Technology:</strong> Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions
-          <strong>Drone Technology:</strong> Drone assembling, GPS navigation programming, Precision agriculture & mapping</p>
-        </div>
-      </div>
-      
-      <h3 class="font-headline text-2xl font-bold text-primary mt-8 mb-4">Skill Development Includes:</h3>
-      <ul class="list-disc pl-6 mb-8 space-y-2">
-        * Block & Text-based Coding (Scratch, Arduino, Python)
-        * Hands-on Electronics & Sensor Integration
-        * Real-world Problem Solving through Projects
-        * Design Thinking & 21st Century Skills
-        * Participation in Competitions & Innovation Fairs
-      </ul>
-
-      <h2 class="font-headline text-3xl font-bold text-primary mt-12 mb-6">For Engineering Colleges</h2>
-      <h3 class="font-headline text-2xl font-bold text-primary mb-4">Flexible, Department-Wise Workshops</h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-         <li>We conduct workshops based on the college timetable and availability of departments.</li>
-         <li>Each session is custom-tailored for specific streams like ECE, CSE, EEE, Mech, AI/ML, etc.</li>
-      </ul>
-
-      <div class="space-y-8">
-        <div>
-          <h4 class="font-headline text-xl font-bold text-primary mb-3">For ECE/EEE:</h4>
-          <p><strong>Workshop Focus:</strong> Embedded Systems, Robotics Hardware & Microcontrollers</p>
-          <p><strong>Topics Covered:</strong></p>
-          <ul class="list-disc pl-8 mt-2 space-y-1">
-            <li>Registered Microcontroller Programming (ARM, STM32, ESP32)</li>
-            <li>Microprocessor Architecture & Interfacing</li>
-            <li>Sensor Integration (IR, Ultrasonic, LiDAR)</li>
-            <li>Real-time Robotics Hardware Projects (Line Follower, Obstacle Avoider, IoT-based bots)</li>
-            <li>Introduction to ROS 2 Communication System (Publisher/Subscriber, Services)</li>
-          </ul>
-          <p class="mt-2"><strong>Tools:</strong> Arduino, ESP32, Embedded C, Python (rclpy), ROS 2 Foxy</p>
-        </div>
-
-        <div>
-          <h4 class="font-headline text-xl font-bold text-primary mb-3">For CSE/ECE:</h4>
-          <p><strong>Workshop Focus:</strong> Software Side of Robotics & Automation</p>
-          <p><strong>Topics Covered:</strong></p>
-          <ul class="list-disc pl-8 mt-2 space-y-1">
-            <li>ROS 2 Foxy Setup & Workspace</li>
-            <li>Python-based Node Development (Publisher, Subscriber, Services, Actions)</li>
-            <li>ROS 2 Launch Files and Parameters</li>
-            <li>SLAM Toolbox for Mapping & Localization</li>
-            <li>Nav2 Stack for Autonomous Navigation</li>
-            <li>Final Mini Project: Mapping + Navigation in Simulation</li>
-          </ul>
-          <p class="mt-2"><strong>Tools:</strong> ROS 2 Foxy, Ubuntu 20.04, Python, Gazebo, RViz2, SLAM Toolbox</p>
-        </div>
-      </div>
-    `,
+    longDescription: `We empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.`,
     icon: FlaskConical,
     category: "Education & Training",
     images: [
@@ -233,17 +146,6 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "Chaganti Sandeep",
-    role: "Chief Technology Officer",
-    image: "https://placehold.co/400x400.png",
-    dataAiHint: "man portrait tech",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-      github: "#",
-    },
-  },
-  {
     name: "Kandi Ajay Kumar",
     role: "Lead Developer",
     image: "https://placehold.co/400x400.png",
@@ -262,6 +164,17 @@ export const team: TeamMember[] = [
     socials: {
       linkedin: "#",
       twitter: "#",
+    },
+  },
+  {
+    name: "Chaganti Sandeep",
+    role: "Chief Technology Officer",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "man portrait tech",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
     },
   },
 ];
