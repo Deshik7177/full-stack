@@ -112,10 +112,10 @@ export const services: Service[] = [
       <div class="space-y-6">
         <div>
           <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 4–5: Foundation & Curiosity</h4>
-          <p><strong>Robotics:</strong> Introduction to Robots, Daily life applications, Simple DIY robots</p>
-          <p><strong>Space Technology:</strong> Stories of rockets & satellites, ISRO missions, Paper rocket experiments</p>
-          <p><strong>Water Technology:</strong> Water cycle models, Basic purification experiments</p>
-          <p><strong>Drone Technology:</strong> Introduction to drones, Build-your-own glider models</p>
+          <p><strong>Robotics:</strong> Introduction to Robots, Daily life applications, Simple DIY robots
+          <strong>Space Technology:</strong> Stories of rockets & satellites, ISRO missions, Paper rocket experiments
+          <strong>Water Technology:</strong> Water cycle models, Basic purification experiments
+          <strong>Drone Technology:</strong> Introduction to drones, Build-your-own glider models</p>
         </div>
         
         <div>
