@@ -214,9 +214,6 @@ export default function Home() {
           <motion.div 
             className="mt-12 grid gap-8 md:grid-cols-3"
             variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
           >
             {whyChooseUsItems.map((item) => (
               <motion.div 
