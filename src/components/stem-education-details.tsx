@@ -13,6 +13,26 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "./ui/badge";
+import { BrainCircuit, Rocket, Droplet, ToyBrick } from "lucide-react";
+
+const focusAreas = [
+    {
+        title: "Robotics",
+        icon: BrainCircuit,
+    },
+    {
+        title: "Space Technology",
+        icon: Rocket,
+    },
+    {
+        title: "Water Technology",
+        icon: Droplet,
+    },
+    {
+        title: "Drone Technology",
+        icon: ToyBrick,
+    },
+]
 
 const schoolCurriculum = [
     {
@@ -75,6 +95,29 @@ const collegeCurriculum = [
 export function StemEducationDetails() {
   return (
     <div className="space-y-16">
+      <section>
+        <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-3xl font-bold text-primary mb-4">
+                Our Focus Areas
+            </h2>
+            <p className="text-lg text-muted-foreground">
+                We provide hands-on education in four key areas of modern technology, preparing students for the future of innovation.
+            </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {focusAreas.map((area) => (
+                 <Card key={area.title} className="text-center">
+                    <CardHeader className="items-center">
+                        <div className="bg-primary/10 text-primary p-4 rounded-full">
+                           <area.icon className="h-8 w-8" />
+                        </div>
+                        <CardTitle>{area.title}</CardTitle>
+                    </CardHeader>
+                </Card>
+            ))}
+        </div>
+      </section>
+
       <section>
         <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl font-bold text-primary mb-4">
