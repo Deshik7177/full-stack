@@ -46,8 +46,20 @@ export default function Home() {
       y: 0,
       transition: {
         duration: 0.5,
+        staggerChildren: 0.2
       }
     }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -121,9 +133,9 @@ export default function Home() {
               <CarouselContent>
                 {services.map((service, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
+                    <motion.div variants={itemVariants} className="p-1 h-full">
                       <ServiceCard service={service} className="service-card-bg"/>
-                    </div>
+                    </motion.div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -166,9 +178,9 @@ export default function Home() {
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
+                    <motion.div variants={itemVariants} className="p-1">
                       <ProjectCard project={project} />
-                    </div>
+                    </motion.div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -199,14 +211,17 @@ export default function Home() {
               We are more than just a service provider; we are your strategic partner in innovation.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <motion.div 
+            className="mt-12 grid gap-8 md:grid-cols-3"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {whyChooseUsItems.map((item) => (
               <motion.div 
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5 }}
+                variants={itemVariants}
               >
                 <Card className="h-full text-center bg-card text-card-foreground">
                   <CardHeader className="items-center">
@@ -221,7 +236,7 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.section>
 
