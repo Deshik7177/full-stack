@@ -120,18 +120,18 @@ export const services: Service[] = [
         
         <div>
           <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 6–7: Concept Building & Exploration</h4>
-          <p><strong>Robotics:</strong> Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots</p>
-          <p><strong>Space Technology:</strong> Solar system & satellite types, Satellite communication models</p>
-          <p><strong>Water Technology:</strong> Rainwater harvesting, Water level indicators using sensors</p>
-          <p><strong>Drone Technology:</strong> Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue</p>
+          <p><strong>Robotics:</strong> Basic sensors & motors, Drag-and-drop coding (Scratch), Obstacle-avoiding bots
+          <strong>Space Technology:</strong> Solar system & satellite types, Satellite communication models
+          <strong>Water Technology:</strong> Rainwater harvesting, Water level indicators using sensors
+          <strong>Drone Technology:</strong> Principles of flight, DIY mini-rotor models, Drone use in agriculture & rescue</p>
         </div>
 
         <div>
           <h4 class="font-headline text-xl font-bold text-primary mb-3">Class 8–10: Application & Innovation</h4>
-          <p><strong>Robotics:</strong> Microcontroller coding (Arduino), Smart robotics projects, Real-world automation</p>
-          <p><strong>Space Technology:</strong> Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning</p>
-          <p><strong>Water Technology:</strong> Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions</p>
-          <p><strong>Drone Technology:</strong> Drone assembling, GPS navigation programming, Precision agriculture & mapping</p>
+          <p><strong>Robotics:</strong> Microcontroller coding (Arduino), Smart robotics projects, Real-world automation
+          <strong>Space Technology:</strong> Real-time satellite tracking, Chandrayaan & Gaganyaan simulations, Space mission planning
+          <strong>Water Technology:</strong> Smart irrigation systems, Real-time water quality monitoring, IoTbased solutions
+          <strong>Drone Technology:</strong> Drone assembling, GPS navigation programming, Precision agriculture & mapping</p>
         </div>
       </div>
 
