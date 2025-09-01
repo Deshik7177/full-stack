@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -38,7 +39,8 @@ export default function ProjectsPage() {
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           {projects.map((project) => (
             <motion.div key={project.title} variants={itemVariants}>

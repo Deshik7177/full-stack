@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -29,7 +30,8 @@ export default function ContactPage() {
           <motion.div
             variants={itemVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.1 }}
           >
             <ContactForm />
@@ -38,7 +40,8 @@ export default function ContactPage() {
             className="space-y-8"
             variants={itemVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.2 }}
           >
             <div>

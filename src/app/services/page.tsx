@@ -63,7 +63,8 @@ export default function ServicesPage() {
               className="grid gap-8 md:grid-cols-2"
               variants={containerVariants}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
             >
               {category.services.map((service: Service) => (
                 <motion.div key={service.title} variants={itemVariants}>
@@ -79,7 +80,7 @@ export default function ServicesPage() {
            <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
             <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">

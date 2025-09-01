@@ -1,6 +1,5 @@
 
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
@@ -52,12 +51,6 @@ export default function RootLayout({
           </div>
           <Toaster />
         </ThemeProvider>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <Analytics />
       </Body>
     </html>

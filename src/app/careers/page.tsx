@@ -79,7 +79,8 @@ export default function CareersPage() {
             className="space-y-8 max-w-4xl mx-auto"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             {careers.length > 0 ? (
               careers.map((career) => (
@@ -106,7 +107,7 @@ export default function CareersPage() {
           <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto"
             >
