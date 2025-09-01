@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
-import { CustomCursor } from "@/components/custom-cursor";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Body } from "@/components/body";
@@ -46,7 +45,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <CustomCursor />
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-grow">{children}</main>
