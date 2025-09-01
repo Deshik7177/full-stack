@@ -117,6 +117,44 @@ export default function AboutPage() {
                 </section>
 
                 <section>
+                    <Card className="bg-card/80 text-card-foreground p-8 md:p-12">
+                        <div className="grid md:grid-cols-3 gap-8 items-center">
+                            <motion.div 
+                                className="md:col-span-1"
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <div className="aspect-square relative rounded-full overflow-hidden mx-auto w-48 h-48 md:w-full md:h-full">
+                                    <Image 
+                                        src="https://placehold.co/400x400.png"
+                                        alt="Kandi Ajay Kumar"
+                                        fill
+                                        className="object-cover"
+                                        data-ai-hint="man portrait professional"
+                                    />
+                                </div>
+                            </motion.div>
+                            <motion.div 
+                                className="md:col-span-2"
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                            >
+                                <blockquote className="text-xl italic text-white border-l-4 border-primary pl-6">
+                                    <p className="mb-4">"At SytecX Labs, our mission is to spark innovation in every young mind. We guide students from idea to prototype, product to business, helping them explore the real world of entrepreneurship."</p>
+                                    <p>"With a special focus on defence technology and digital media solutions, we aim to shape every child into a confident innovator and future entrepreneur."</p>
+                                </blockquote>
+                                <p className="mt-6 font-semibold text-white text-right">Kandi Ajay Kumar</p>
+                                <p className="text-sm text-primary text-right">Managing Director, SytecX Labs</p>
+                            </motion.div>
+                        </div>
+                    </Card>
+                </section>
+
+                <section>
                     <h2 className="font-headline text-3xl font-bold text-white mb-12 text-center">Meet Our Team</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {team.map((member, index) => (
