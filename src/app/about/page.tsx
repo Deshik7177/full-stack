@@ -148,7 +148,7 @@ export default function AboutPage() {
                                     <p>"With a special focus on defence technology and digital media solutions, we aim to shape every child into a confident innovator and future entrepreneur."</p>
                                 </blockquote>
                                 <p className="mt-6 font-semibold text-white text-right">Kandi Ajay Kumar</p>
-                                <p className="text-sm text-primary text-right">Managing Director, SytecX Labs</p>
+                                <p className="text-sm text-primary text-right">Founder, SytecX Labs</p>
                             </motion.div>
                         </div>
                     </Card>

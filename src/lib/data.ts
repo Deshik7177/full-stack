@@ -143,9 +143,30 @@ export const careers: Career[] = [
 ];
 
 export const team: TeamMember[] = [
+  // {
+  //   name: "Kandi Ajay Kumar",
+  //   role: "Founder",
+  //   image: "https://placehold.co/400x400.png",
+  //   dataAiHint: "man portrait tech",
+  //   socials: {
+  //     linkedin: "#",
+  //     twitter: "#",
+  //     github: "#",
+  //   },
+  // },
+  {
+    name: "Nakella Kiran",
+    role: "Co-Founder",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "man portrait creative",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
   {
     name: "Madireddy Bala Chaitanya",
-    role: "CEO & Founder",
+    role: "Chief Executive Officer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait",
     socials: {
@@ -163,27 +184,6 @@ export const team: TeamMember[] = [
       linkedin: "#",
       twitter: "#",
       github: "#",
-    },
-  },
-  {
-    name: "Kandi Ajay Kumar",
-    role: "Lead Developer",
-    image: "https://placehold.co/400x400.png",
-    dataAiHint: "man portrait tech",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-      github: "#",
-    },
-  },
-  {
-    name: "Kiran",
-    role: "Creative Director",
-    image: "https://placehold.co/400x400.png",
-    dataAiHint: "man portrait creative",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
     },
   },
   {
