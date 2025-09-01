@@ -1,3 +1,4 @@
+
 'use server';
 
 import { z } from 'zod';
@@ -37,8 +38,9 @@ export async function submitContactForm(formData: z.infer<typeof contactFormSche
   });
 
   const mailOptions = {
-    from: process.env.GMAIL_EMAIL,
-    to: process.env.GMAIL_EMAIL, // Send the email to yourself
+    from: `"${name}" <${email}>`,
+    to: "we@sytecxlabs.com", // Send the email to your professional address
+    replyTo: email,
     subject: `New Contact Form Submission from ${name}`,
     html: `
       <h2>New Contact Form Submission</h2>
