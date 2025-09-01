@@ -184,6 +184,7 @@ export const team: TeamMember[] = [
     dataAiHint: "man portrait developer",
     socials: {
       linkedin: "#",
+      github: "#",
       twitter: "#",
     },
   },
