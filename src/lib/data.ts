@@ -1,6 +1,6 @@
 
 import type { Project, Service, Workshop, Career, TeamMember, WhyJoinUsItem } from "@/lib/types";
-import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket, Users, Handshake, BrainCircuit, HeartHandshake } from "lucide-react";
+import { Film, FlaskConical, Cpu, Search, Package, Briefcase, Ruler, Rocket, Users, Handshake, BrainCircuit, HeartHandshake, ToyBrick, Droplet } from "lucide-react";
 
 export const projects: Project[] = [
   {
@@ -94,7 +94,7 @@ export const services: Service[] = [
     slug: "stem-education",
     tagline: "Inspiring the next generation of innovators.",
     description: "We deliver engaging and interactive STEM education programs designed to cultivate curiosity and build critical skills for the future.",
-    longDescription: `We empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.`,
+    longDescription: "We empower students with hands-on learning in future technologies through our specialized STEM modules, aligned with NEP 2020 and designed to spark innovation in every child.",
     icon: FlaskConical,
     category: "Education & Training",
     images: [
@@ -136,7 +136,7 @@ export const careers: Career[] = [
 export const team: TeamMember[] = [
   {
     name: "Madireddy Bala Chaitanya",
-    role: "CEO",
+    role: "CEO & Founder",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait",
     socials: {
@@ -158,7 +158,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Kandi Ajay Kumar",
-    role: "Managing Director",
+    role: "Lead Developer",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait tech",
     socials: {
@@ -168,10 +168,20 @@ export const team: TeamMember[] = [
     },
   },
   {
-    name: "Nakella Kiran",
-    role: "Managing Director",
+    name: "Kiran",
+    role: "Creative Director",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait creative",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    name: "Paila Dhana Deshik",
+    role: "Developer",
+    image: "https://placehold.co/400x400.png",
+    dataAiHint: "man portrait developer",
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -211,3 +221,5 @@ export const whyJoinUs: WhyJoinUsItem[] = [
     icon: HeartHandshake,
   }
 ];
+
+    
