@@ -20,27 +20,29 @@ export async function submitContactForm(formData: z.infer<typeof contactFormSche
   const { name, email, message } = parsedData.data;
 
   // IMPORTANT: You must create a .env.local file in the root of your project
-  // and add your Gmail credentials to it.
+  // and add your email provider's SMTP credentials.
   //
   // .env.local
-  // GMAIL_EMAIL=your-email@gmail.com
-  // GMAIL_APP_PASSWORD=your-16-digit-app-password
+  // SMTP_HOST=your-smtp-host.com
+  // SMTP_PORT=587
+  // SMTP_USER=your-professional-email@example.com
+  // SMTP_PASSWORD=your-email-password
   //
-  // To generate an App Password, follow this guide:
-  // https://support.google.com/accounts/answer/185833
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT || 587),
+    secure: (process.env.SMTP_PORT || 587) === '465', // true for 465, false for other ports
     auth: {
-      user: process.env.GMAIL_EMAIL,
-      pass: process.env.GMAIL_APP_PASSWORD,
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: `"${name}" <${email}>`,
+    from: `"${name}" <${process.env.SMTP_USER}>`, // Use your professional email as the sender
     to: "we@sytecxlabs.com", // Send the email to your professional address
-    replyTo: email,
+    replyTo: email, // Set the reply-to to the user's email
     subject: `New Contact Form Submission from ${name}`,
     html: `
       <h2>New Contact Form Submission</h2>

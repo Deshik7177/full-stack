@@ -1,3 +1,4 @@
+
 # Sytecx Labs Website
 
 Welcome to the Sytecx Labs website project! This document provides an overview of the project structure, technologies used, and instructions for making common updates. This application was built using Firebase Studio.
@@ -80,31 +81,28 @@ The contact form is handled by a **Next.js Server Action**, which provides a sec
 
 **File to Edit**: `src/app/actions.ts`
 
-Currently, the `submitContactForm` function logs the form data to the server console. To make it send an email, you will need to integrate an email service.
+The form is configured to send an email using a standard SMTP server. To make it work, you need to provide your email provider's credentials.
 
-**Example using Nodemailer with a Gmail account:**
+**Example using a custom email provider:**
 
-1.  **Install Nodemailer**:
-    ```bash
-    npm install nodemailer
-    npm install --save-dev @types/nodemailer
-    ```
+1.  **Install Nodemailer** (already done):
+    The project uses `nodemailer` to send emails.
 
-2.  **Create a Gmail App Password**:
-    - Go to your Google Account settings.
-    - Navigate to **Security** > **2-Step Verification** and make sure it's enabled.
-    - Go to **App passwords**, create a new password for "Mail" on your computer, and copy the 16-digit password.
+2.  **Find your SMTP Server Details**:
+    You'll need the SMTP host, port, username, and password for your professional email account. You can usually find this information in your email provider's documentation.
 
 3.  **Set Environment Variables**:
     - Create a `.env.local` file in the root of your project.
-    - Add your credentials:
+    - Add your credentials. It should look like this:
       ```
-      GMAIL_EMAIL=your-email@gmail.com
-      GMAIL_APP_PASSWORD=your-16-digit-app-password
+      SMTP_HOST=smtp.yourprovider.com
+      SMTP_PORT=587
+      SMTP_USER=your-professional-email@yourdomain.com
+      SMTP_PASSWORD=your-email-password
       ```
 
-4.  **Update the Server Action**:
-    - Modify `src/app/actions.ts` to use `nodemailer` to send the email. The updated file is already configured to do this.
+4.  **How it Works**:
+    - The server action in `src/app/actions.ts` reads these environment variables to configure `nodemailer` and send the email from your professional account.
 
 ## Running the Project Locally
 
