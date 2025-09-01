@@ -155,7 +155,7 @@ export const team: TeamMember[] = [
   //   },
   // },
   {
-    name: "Nakella Kiran",
+    name: "Nakkella Kiran",
     role: "Co-Founder",
     image: "https://placehold.co/400x400.png",
     dataAiHint: "man portrait creative",
